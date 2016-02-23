@@ -1,0 +1,1 @@
+{"version":3,"sources":["hamburgers.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"hamburgers.js","sourcesContent":["var Hameburgers = Hameburgers || {};\n\nHameburgers = {\n  make: function() {\n\n  }\n}\n\nHameburgers.make();\n"],"sourceRoot":"/source/"}
