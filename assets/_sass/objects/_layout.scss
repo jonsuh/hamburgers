@@ -1,0 +1,39 @@
+// Layout
+// ==================================================
+.table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tray {
+  text-align: center;
+  width: 100%;
+  background-color: #2196f3;
+  padding-top: 5em + 1.75em;
+  padding-bottom: 5em;
+  position: relative;
+}
+.tray:nth-child(1) {
+  background-color: #4a148c;
+}
+.tray:nth-child(2) {
+  background-color: #4db6ac;
+}
+.tray:nth-child(3) {
+  background-color: #ff5722;
+}
+.tray:nth-child(4) {
+  background-color: #ec407a;
+}
+.tray:nth-child(5) {
+  background-color: #fbc02d;
+}
+
+@media only screen and (min-width: 480px) {
+  .tray {
+    width: 50%;
+    padding-top: 7em + 1.75em;
+    padding-bottom: 7em;
+  }
+}

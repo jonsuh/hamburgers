@@ -1,5 +1,65 @@
 // Hamburger
 // ==================================================
-.hamburger {
+$hamburger-padding     : 15px;
+$hamburger-layer-width : 40px;
+$hamburger-layer-height: 4px;
+$hamburger-layer-offset: 6px;
 
+.hamburger {
+  display: inline-block;
+  padding: $hamburger-padding;
+  cursor: pointer;
+}
+
+.hamburger-box {
+  width: $hamburger-layer-width;
+  height: $hamburger-layer-height * 3 + $hamburger-layer-offset * 2;
+  position: relative;
+}
+
+.hamburger-inner {
+  top: 50%;
+  margin-top: $hamburger-layer-height / -2;
+
+  &,
+  &::before,
+  &::after {
+    width: $hamburger-layer-width;
+    height: $hamburger-layer-height;
+    background-color: $white;
+    border-radius: $hamburger-layer-height;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+    transform-origin: center;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
+
+  &::before {
+    top: ($hamburger-layer-offset + $hamburger-layer-height) * -1;
+  }
+
+  &::after {
+    bottom: ($hamburger-layer-offset + $hamburger-layer-height) * -1;
+  }
+}
+
+// Name
+// ==================================================
+.name {
+  font-size: 0.8em;
+  font-weight: 700;
+  color: $white;
+  padding-top: 1.25em;
+  padding-top: 2em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
