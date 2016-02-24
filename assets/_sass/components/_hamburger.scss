@@ -1,19 +1,20 @@
 // Hamburger
 // ==================================================
-$hamburger-padding     : 15px;
-$hamburger-layer-width : 40px;
-$hamburger-layer-height: 4px;
-$hamburger-layer-offset: 6px;
+$hamburger-padding      : 15px;
+$hamburger-layer-width  : 40px;
+$hamburger-layer-height : 4px;
+$hamburger-layer-spacing: 6px;
+$hamburger-layer-color  : #fff;
 
 .hamburger {
-  display: inline-block;
   padding: $hamburger-padding;
+  display: inline-block;
   cursor: pointer;
 }
 
 .hamburger-box {
   width: $hamburger-layer-width;
-  height: $hamburger-layer-height * 3 + $hamburger-layer-offset * 2;
+  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
   position: relative;
 }
 
@@ -26,13 +27,12 @@ $hamburger-layer-offset: 6px;
   &::after {
     width: $hamburger-layer-width;
     height: $hamburger-layer-height;
-    background-color: $white;
+    background-color: $hamburger-layer-color;
     border-radius: $hamburger-layer-height;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease;
-    transform-origin: center;
   }
 
   &::before,
@@ -42,24 +42,10 @@ $hamburger-layer-offset: 6px;
   }
 
   &::before {
-    top: ($hamburger-layer-offset + $hamburger-layer-height) * -1;
+    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
 
   &::after {
-    bottom: ($hamburger-layer-offset + $hamburger-layer-height) * -1;
+    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
-}
-
-// Name
-// ==================================================
-.name {
-  font-size: 0.8em;
-  font-weight: 700;
-  color: $white;
-  padding-top: 1.25em;
-  padding-top: 2em;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }

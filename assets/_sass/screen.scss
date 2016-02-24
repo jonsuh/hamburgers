@@ -1,13 +1,4 @@
 @charset "UTF-8";
-// Settings
-// ==================================================
-@import "settings/global";
-@import "settings/colors";
-
-// Tools (Utilities)
-// ==================================================
-@import "tools/functions";
-@import "tools/mixins";
 
 // Generic
 // ==================================================
@@ -16,7 +7,6 @@
 
 // Elements
 // ==================================================
-@import "elements/generic";
 @import "elements/typography";
 
 // Objects
@@ -26,7 +16,8 @@
 // Components
 // ==================================================
 @import "components/hamburger";
+@import "components/hamburger-types";
 
 // Trumps
 // ==================================================
-@import "trumps/hamburger-types";
+@import "trumps/home";

@@ -8,7 +8,7 @@
 
 .tray {
   text-align: center;
-  width: 100%;
+  width: 50%;
   background-color: #2196f3;
   padding-top: 3em + 1.75em;
   padding-bottom: 3em;
@@ -32,6 +32,9 @@
 .tray:nth-child(6) {
   background-color: #fbc02d;
 }
+.tray:nth-child(7) {
+  background-color: #2196f3;
+}
 .tray:nth-child(8) {
   background-color: #607d8b;
 }
@@ -44,7 +47,6 @@
 
 @media only screen and (min-width: 480px) {
   .tray {
-    width: 50%;
     padding-top: 5em + 1.75em;
     padding-bottom: 5em;
   }
