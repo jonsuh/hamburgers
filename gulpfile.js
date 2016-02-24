@@ -39,8 +39,7 @@ gulp.task('sass', function() {
     .pipe(sass(sassOptions))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('assets/css'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('assets/css'));
 });
 
 gulp.task('dist:css', function() {
