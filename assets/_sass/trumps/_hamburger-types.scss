@@ -84,15 +84,73 @@
     &::after {
       transform: translate3d($hamburger-layer-width * -0.2, 0, 0) rotate(45deg) scale(0.7, 1);
     }
+  }
+}
 
-    // Right
-    // &::before {
-    //   transform: translate3d($hamburger-layer-width * 0.2, 0, 0) rotate(45deg) scale(0.7, 1);
-    // }
+// Arrow Right
+// ==================================================
+.hamburger--arrow-r.is-active {
+  .hamburger-inner {
+    &::before {
+      transform: translate3d($hamburger-layer-width * 0.2, 0, 0) rotate(45deg) scale(0.7, 1);
+    }
 
-    // &::after {
-    //   transform: translate3d($hamburger-layer-width * 0.2, 0, 0) rotate(-45deg) scale(0.7, 1);
-    // }
+    &::after {
+      transform: translate3d($hamburger-layer-width * 0.2, 0, 0) rotate(-45deg) scale(0.7, 1);
+    }
+  }
+}
+
+// Arrow Alt
+// ==================================================
+.hamburger--arrowalt {
+  .hamburger-inner {
+    &::before {
+      transition: top 0.1s 0.15s ease,
+                  transform 0.15s 0s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &::after {
+      transition: bottom 0.1s 0.15s ease,
+                  transform 0.15s 0s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+  }
+}
+.hamburger--arrowalt.is-active {
+  .hamburger-inner {
+    &::before {
+      top: 0;
+      transform: translate3d($hamburger-layer-width * -0.2, $hamburger-layer-width * -0.25, 0) rotate(-45deg) scale(0.7, 1);
+      transition: top 0.1s ease,
+                  transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: translate3d($hamburger-layer-width * -0.2, $hamburger-layer-width * 0.25, 0) rotate(45deg) scale(0.7, 1);
+      transition: bottom 0.1s ease,
+                  transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    }
+  }
+}
+
+// Arrow Alt Right
+// ==================================================
+.hamburger--arrowalt-r.is-active {
+  .hamburger-inner {
+    &::before {
+      top: 0;
+      transform: translate3d($hamburger-layer-width * 0.2, $hamburger-layer-width * -0.25, 0) rotate(45deg) scale(0.7, 1);
+      transition: top 0.1s ease,
+                  transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: translate3d($hamburger-layer-width * 0.2, $hamburger-layer-width * 0.25, 0) rotate(-45deg) scale(0.7, 1);
+      transition: bottom 0.1s ease,
+                  transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    }
   }
 }
 
