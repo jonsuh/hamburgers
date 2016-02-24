@@ -50,7 +50,7 @@
 
     &::after {
       transition: bottom 0.1s 0.14s ease,
-                  transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                  transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
   }
 
@@ -215,7 +215,7 @@
 
     &::after {
       top: ($hamburger-layer-height * 2) + ($hamburger-layer-offset * 2);
-      transition: transform 0.4s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
 
