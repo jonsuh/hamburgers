@@ -17,20 +17,21 @@
       top: ($hamburger-layer-height * 2) + ($hamburger-layer-offset * 2);
     }
   }
-}
-.hamburger--slider.is-active {
-  .hamburger-inner {
-    $y-offset: $hamburger-layer-offset + $hamburger-layer-height;
 
-    transform: translate3d(0, $y-offset, 0) rotate(45deg);
+  &.is-active {
+    .hamburger-inner {
+      $y-offset: $hamburger-layer-offset + $hamburger-layer-height;
 
-    &::before {
-      transform: rotate(-45deg) translate3d($hamburger-layer-width / -2, $hamburger-layer-offset * -1, 0);
-      opacity: 0;
-    }
+      transform: translate3d(0, $y-offset, 0) rotate(45deg);
 
-    &::after {
-      transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
+      &::before {
+        transform: rotate(-45deg) translate3d($hamburger-layer-width / -2, $hamburger-layer-offset * -1, 0);
+        opacity: 0;
+      }
+
+      &::after {
+        transform: translate3d(0, $y-offset * -2, 0) rotate(-90deg);
+      }
     }
   }
 }
@@ -39,11 +40,12 @@
 // ==================================================
 .hamburger--squeeze {
   .hamburger-inner {
-    transition: transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-duration: 0.1s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
     &::before {
       transition: top 0.1s 0.14s ease,
-                  opacity 0.1s 0s ease;
+                  opacity 0.1s ease;
     }
 
     &::after {
@@ -51,24 +53,26 @@
                   transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
   }
-}
-.hamburger--squeeze.is-active {
-  .hamburger-inner {
-    transform: rotate(45deg);
-    transition: transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-    &::before {
-      top: 0;
-      opacity: 0;
-      transition: top 0.1s ease,
-                  opacity 0.1s 0.14s ease;
-    }
+  &.is-active {
+    .hamburger-inner {
+      transform: rotate(45deg);
+      transition-delay: 0.14s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
-    &::after {
-      bottom: 0;
-      transform: rotate(-90deg);
-      transition: bottom 0.1s ease,
-                  transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+      &::before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.1s ease,
+                    opacity 0.1s 0.14s ease;
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.1s ease,
+                    transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
     }
   }
 }
@@ -107,29 +111,30 @@
   .hamburger-inner {
     &::before {
       transition: top 0.1s 0.15s ease,
-                  transform 0.15s 0s cubic-bezier(0.165, 0.84, 0.44, 1);
+                  transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     &::after {
       transition: bottom 0.1s 0.15s ease,
-                  transform 0.15s 0s cubic-bezier(0.165, 0.84, 0.44, 1);
+                  transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
   }
-}
-.hamburger--arrowalt.is-active {
-  .hamburger-inner {
-    &::before {
-      top: 0;
-      transform: translate3d($hamburger-layer-width * -0.2, $hamburger-layer-width * -0.25, 0) rotate(-45deg) scale(0.7, 1);
-      transition: top 0.1s ease,
-                  transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-    }
 
-    &::after {
-      bottom: 0;
-      transform: translate3d($hamburger-layer-width * -0.2, $hamburger-layer-width * 0.25, 0) rotate(45deg) scale(0.7, 1);
-      transition: bottom 0.1s ease,
-                  transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  &.is-active {
+    .hamburger-inner {
+      &::before {
+        top: 0;
+        transform: translate3d($hamburger-layer-width * -0.2, $hamburger-layer-width * -0.25, 0) rotate(-45deg) scale(0.7, 1);
+        transition: top 0.1s ease,
+                    transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+      }
+
+      &::after {
+        bottom: 0;
+        transform: translate3d($hamburger-layer-width * -0.2, $hamburger-layer-width * 0.25, 0) rotate(45deg) scale(0.7, 1);
+        transition: bottom 0.1s ease,
+                    transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+      }
     }
   }
 }
@@ -158,36 +163,39 @@
 // ==================================================
 .hamburger--spin {
   .hamburger-inner {
-    transition: transform 0.3s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
     &::before {
       transition: top 0.1s 0.34s ease-in,
-                  opacity 0.1s 0s ease-in;
+                  opacity 0.1s ease-in;
     }
 
     &::after {
       transition: bottom 0.1s 0.34s ease-in,
-                  transform 0.3s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                  transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
   }
-}
-.hamburger--spin.is-active {
-  .hamburger-inner {
-    transform: rotate(225deg);
-    transition: transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-    &::before {
-      top: 0;
-      opacity: 0;
-      transition: top 0.1s ease-out,
-                  opacity 0.1s 0.14s ease-out;
-    }
+  &.is-active {
+    .hamburger-inner {
+      transform: rotate(225deg);
+      transition-delay: 0.14s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
-    &::after {
-      bottom: 0;
-      transform: rotate(-90deg);
-      transition: bottom 0.1s ease-out,
-                  transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+      &::before {
+        top: 0;
+        opacity: 0;
+        transition: top 0.1s ease-out,
+                    opacity 0.1s 0.14s ease-out;
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+        transition: bottom 0.1s ease-out,
+                    transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
     }
   }
 }
@@ -197,7 +205,8 @@
 .hamburger--elastic {
   .hamburger-inner {
     top: 0;
-    transition: transform 0.4s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     &::before {
       top: $hamburger-layer-height + $hamburger-layer-offset;
@@ -209,22 +218,23 @@
       transition: transform 0.4s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
-}
-.hamburger--elastic.is-active {
-  .hamburger-inner {
-    $y-offset: $hamburger-layer-offset + $hamburger-layer-height;
 
-    transform: translate3d(0, $y-offset, 0) rotate(135deg);
-    transition-delay: 0.1s;
+  &.is-active {
+    .hamburger-inner {
+      $y-offset: $hamburger-layer-offset + $hamburger-layer-height;
 
-    &::before {
-      transition-delay: 0s;
-      opacity: 0;
-    }
-
-    &::after {
-      transform: translate3d(0, $y-offset * -2, 0) rotate(-270deg);
+      transform: translate3d(0, $y-offset, 0) rotate(135deg);
       transition-delay: 0.1s;
+
+      &::before {
+        transition-delay: 0s;
+        opacity: 0;
+      }
+
+      &::after {
+        transform: translate3d(0, $y-offset * -2, 0) rotate(-270deg);
+        transition-delay: 0.1s;
+      }
     }
   }
 }
@@ -239,7 +249,7 @@
 
     &::before {
       left: 0;
-      transition: transform 0.2s 0s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+      transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335),
                   top 0.05s 0.2s linear,
                   left 0.2s 0.25s ease-in;
     }
@@ -247,34 +257,35 @@
     &::after {
       top: ($hamburger-layer-height) + ($hamburger-layer-offset);
       right: 0;
-      transition: transform 0.2s 0s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+      transition: transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335),
                   top 0.05s 0.2s linear,
                   right 0.2s 0.25s ease-in;
     }
   }
-}
-.hamburger--emphatic.is-active {
-  .hamburger-inner {
-    transition-delay: 0s;
-    transition-timing-function: ease-out;
-    background-color: transparent;
 
-    &::before {
-      left: $hamburger-layer-width * -2;
-      top: $hamburger-layer-width * -2;
-      transform: translate3d($hamburger-layer-width * 2, $hamburger-layer-width * 2, 0) rotate(45deg);
-      transition: left 0.2s ease-out,
-                  top 0.05s 0.2s linear,
-                  transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
+  &.is-active {
+    .hamburger-inner {
+      transition-delay: 0s;
+      transition-timing-function: ease-out;
+      background-color: transparent;
 
-    &::after {
-      right: $hamburger-layer-width * -2;
-      top: $hamburger-layer-width * -2;
-      transform: translate3d($hamburger-layer-width * -2, $hamburger-layer-width * 2, 0) rotate(-45deg);
-      transition: right 0.2s ease-out,
-                  top 0.05s 0.2s linear,
-                  transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+      &::before {
+        left: $hamburger-layer-width * -2;
+        top: $hamburger-layer-width * -2;
+        transform: translate3d($hamburger-layer-width * 2, $hamburger-layer-width * 2, 0) rotate(45deg);
+        transition: left 0.2s ease-out,
+                    top 0.05s 0.2s linear,
+                    transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      &::after {
+        right: $hamburger-layer-width * -2;
+        top: $hamburger-layer-width * -2;
+        transform: translate3d($hamburger-layer-width * -2, $hamburger-layer-width * 2, 0) rotate(-45deg);
+        transition: right 0.2s ease-out,
+                    top 0.05s 0.2s linear,
+                    transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
     }
   }
 }
@@ -282,43 +293,44 @@
 // Collapse
 // ==================================================
 .hamburger--collapse {
-  .hamburger-box {
-  }
   .hamburger-inner {
     top: auto;
     bottom: 0;
-    transition: transform 0.15s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-duration: 0.15s;
+    transition-delay: 0.15s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
     &::after {
       top: ($hamburger-layer-offset * 2 + $hamburger-layer-height * 2) * -1;
       transition: top 0.3s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-                  opacity 0.1s 0s linear;
+                  opacity 0.1s linear;
     }
 
     &::before {
       transition: top 0.12s 0.3s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
-                  transform 0.15s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                  transform 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     }
   }
-}
-.hamburger--collapse.is-active {
-  .hamburger-inner {
-    transform: translate3d(0, ($hamburger-layer-offset + $hamburger-layer-height) * -1, 0) rotate(-45deg);
-    transition-delay: 0.32s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
-    &::after {
-      top: 0;
-      opacity: 0;
-      transition: top 0.3s 0s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-                  opacity 0.1s 0.27s linear;
-    }
+  &.is-active {
+    .hamburger-inner {
+      transform: translate3d(0, ($hamburger-layer-offset + $hamburger-layer-height) * -1, 0) rotate(-45deg);
+      transition-delay: 0.32s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
-    &::before {
-      top: 0;
-      transform: rotate(-90deg);
-      transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
-                  transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+      &::after {
+        top: 0;
+        opacity: 0;
+        transition: top 0.3s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+                    opacity 0.1s 0.27s linear;
+      }
+
+      &::before {
+        top: 0;
+        transform: rotate(-90deg);
+        transition: top 0.12s 0.18s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+                    transform 0.15s 0.42s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
     }
   }
 }
@@ -327,7 +339,8 @@
 // ==================================================
 .hamburger--vortex {
   .hamburger-inner {
-    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 
     &::before,
     &::after {
@@ -344,25 +357,26 @@
       transition-property: bottom, transform;
     }
   }
-}
-.hamburger--vortex.is-active {
-  .hamburger-inner {
-    transform: rotate(765deg);
-    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 
-    &::before,
-    &::after {
-      transition-delay: 0s;
-    }
+  &.is-active {
+    .hamburger-inner {
+      transform: rotate(765deg);
+      transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 
-    &::before {
-      top: 0;
-      opacity: 0;
-    }
+      &::before,
+      &::after {
+        transition-delay: 0s;
+      }
 
-    &::after {
-      bottom: 0;
-      transform: rotate(90deg);
+      &::before {
+        top: 0;
+        opacity: 0;
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(90deg);
+      }
     }
   }
 }
@@ -377,19 +391,20 @@
       transition: none;
     }
   }
-}
-.hamburger--boring.is-active {
-  .hamburger-inner {
-    transform: rotate(45deg);
 
-    &::before {
-      top: 0;
-      opacity: 0;
-    }
+  &.is-active {
+    .hamburger-inner {
+      transform: rotate(45deg);
 
-    &::after {
-      bottom: 0;
-      transform: rotate(-90deg);
+      &::before {
+        top: 0;
+        opacity: 0;
+      }
+
+      &::after {
+        bottom: 0;
+        transform: rotate(-90deg);
+      }
     }
   }
 }
