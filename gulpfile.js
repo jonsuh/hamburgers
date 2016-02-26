@@ -7,6 +7,7 @@ var cssnano      = require('gulp-cssnano');
 var eslint       = require('gulp-eslint');
 var notify       = require('gulp-notify');
 var plumber      = require('gulp-plumber');
+var rename       = require('gulp-rename');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
@@ -23,30 +24,35 @@ var plumberOptions = {
   errorHandler: onError,
 };
 
+var postCSSOptions = require('./config.postcss.json');
+var autoprefixerOptions = postCSSOptions.autoprefixer;
+
 gulp.task('sass', function() {
-  var postCSSOptions = require('./config.postcss.json');
-  var autoprefixerOptions = postCSSOptions.autoprefixer;
-
-  var sassOptions = {
-    includePaths: [
-      // 'node_modules/bourbon/app/assets/stylesheets',
-    ]
-  };
-
-  return gulp.src('assets/_sass/**/*.scss')
+  return gulp.src('assets/_sass/screen.scss')
     .pipe(plumber(plumberOptions))
     .pipe(sourcemaps.init())
-    .pipe(sass(sassOptions))
+    .pipe(sass())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('dist:css', function() {
+gulp.task('site:css', function() {
   return gulp.src('assets/css/**/*.css')
     .pipe(csscomb('.csscomb.dist.json'))
     .pipe(cssnano())
     .pipe(gulp.dest('assets/css'));
+});
+
+gulp.task('dist:css', function() {
+  return gulp.src('assets/_sass/hamburgers/hamburgers.scss')
+    .pipe(sass())
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(gulp.dest('dist'))
+    .pipe(csscomb('.csscomb.dist.json'))
+    .pipe(cssnano())
+    .pipe(rename('hamburgers.min.css'))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('eslint', function() {
@@ -66,7 +72,7 @@ gulp.task('concat', ['eslint'], function() {
     .pipe(gulp.dest('assets/js'));
 });
 
-gulp.task('dist:js', function() {
+gulp.task('site:js', function() {
   return gulp.src([
       'assets/_js/**/*.js',
     ])
@@ -85,9 +91,11 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['sass', 'concat']);
 
-gulp.task('dist', ['build'], function() {
-  gulp.start('dist:css');
-  gulp.start('dist:js');
+gulp.task('site', ['build'], function() {
+  gulp.start('site:css');
+  gulp.start('site:js');
 });
+
+gulp.task('dist', ['dist:css']);
 
 gulp.task('default', ['build', 'watch']);
