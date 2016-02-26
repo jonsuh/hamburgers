@@ -1,23 +1,10 @@
 @charset "UTF-8";
 
-// Generic
-// ==================================================
-@import "generic/normalize";
-@import "generic/box-sizing";
+@import "settings";
+@import "generic";
+@import "typography";
+@import "objects";
 
-// Elements
-// ==================================================
-@import "elements/typography";
+@import "hamburgers/hamburgers"; // Hamburgers!
 
-// Objects
-// ==================================================
-@import "objects/layout";
-
-// Components
-// ==================================================
-@import "components/hamburger";
-@import "components/hamburger-types";
-
-// Trumps
-// ==================================================
-@import "trumps/home";
+@import "trumps";

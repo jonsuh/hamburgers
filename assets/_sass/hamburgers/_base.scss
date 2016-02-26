@@ -1,15 +1,22 @@
 // Hamburger
 // ==================================================
-$hamburger-padding      : 15px;
-$hamburger-layer-width  : 40px;
-$hamburger-layer-height : 4px;
-$hamburger-layer-spacing: 6px;
-$hamburger-layer-color  : #fff;
-
 .hamburger {
-  padding: $hamburger-padding;
+  padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;
   cursor: pointer;
+
+  transition-property: opacity, filter;
+  transition-duration: $hamburger-hover-transition-duration;
+  transition-timing-function: $hamburger-hover-transition-timing-function;
+
+  &:hover {
+    @if $hamburger-hover-use-filter == true {
+      filter: $hamburger-hover-filter;
+    }
+    @else {
+      opacity: $hamburger-hover-opacity;
+    }
+  }
 }
 
 .hamburger-box {

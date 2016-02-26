@@ -1,0 +1,128 @@
+// Typography
+// ==================================================
+body {
+  font-family: -apple-system, ".SFNSDisplay-Regular", Roboto, Helvetica, Arial, sans-serif;
+  color: #222;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 18px;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 17px;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 1.5em;
+  margin-top: 0;
+}
+
+a {
+  color: $blue;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p,
+ol,
+ul,
+pre {
+  font-size: 15px;
+  margin-bottom: 1.5em;
+  margin-top: 0;
+}
+
+ol {
+  padding-left: 1.5em;
+}
+
+li {
+  padding-left: 0.25em;
+  margin-bottom: 1em;
+
+  p,
+  pre {
+    margin-bottom: 0.5em;
+  }
+}
+
+code,
+pre {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+code {
+  padding: 3px 5px;
+}
+
+pre {
+  color: #586e75;
+  padding: 10px;
+
+  code {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  span.accent {
+    color: #000;
+    font-weight: 600;
+    background-color: transparent;
+  }
+}
+
+mark {
+
+}
+
+ol,
+ul,
+pre {
+  & + h2,
+  & + h3 {
+    margin-top: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  h1 {
+    font-size: 21px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  p,
+  ol,
+  ul,
+  pre {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,112 @@
+// Trumps
+// ==================================================
+.hamburger {
+  .hamburger-inner {
+    &,
+    &::before,
+    &::after {
+      background-color: #fff;
+    }
+  }
+}
+
+.hamburger--nav {
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+  cursor: default;
+
+  .hamburger-inner {
+    &,
+    &::before,
+    &::after {
+      background-color: #222;
+    }
+  }
+
+  &.hamburger--elastic,
+  &.hamburger--slider {
+    .hamburger-inner {
+      top: 2px;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.hamburger-example-wrap {
+  text-align: center;
+}
+
+.hamburger--example {
+  outline: 1px dashed cyan;
+
+  .hamburger-box {
+    outline: 1px dashed green;
+  }
+
+  .hamburger-inner {
+    &,
+    &::before,
+    &::after {
+      background-color: #222;
+    }
+  }
+}
+
+.name {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 1.25em;
+  padding-top: 2em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section--information {
+
+}
+
+.information-directions {
+  font-size: 14px;
+  width: 100%;
+}
+
+.section--usage {
+
+}
+
+.types {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    margin-bottom: 0.25em;
+  }
+}
+
+.hint {
+  display: none;
+  margin-bottom: 1em;
+
+  &.is-visible {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .types {
+    column-count: 2;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .information-directions {
+    font-size: 15px;
+  }
+}
