@@ -97,6 +97,45 @@
 
 
 
+// Footer
+// ==================================================
+.footer {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: $grey-lightest;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  a {
+    color: $black;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .footer {
+    font-size: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    br {
+      display: none;
+    }
+
+    a:last-of-type {
+      margin-left: 20px;
+    }
+  }
+}
+
+
+
+
+
 // Highlight
 // ==================================================
 .highlight {
