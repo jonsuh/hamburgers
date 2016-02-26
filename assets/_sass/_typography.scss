@@ -2,7 +2,7 @@
 // ==================================================
 body {
   font-family: -apple-system, ".SFNSDisplay-Regular", Roboto, Helvetica, Arial, sans-serif;
-  color: #222;
+  color: $grey-darkest;
 }
 
 h1,
@@ -36,9 +36,10 @@ p {
 a {
   color: $blue;
   cursor: pointer;
+  text-decoration: underline;
 
   &:hover {
-    text-decoration: underline;
+    color: darken($blue, 15%);
   }
 }
 
@@ -87,7 +88,7 @@ pre {
   }
 
   span.accent {
-    color: #000;
+    color: $black;
     font-weight: 600;
     background-color: transparent;
   }
