@@ -28,24 +28,24 @@ var postCSSOptions = require('./config.postcss.json');
 var autoprefixerOptions = postCSSOptions.autoprefixer;
 
 gulp.task('sass', function() {
-  return gulp.src('assets/_sass/screen.scss')
+  return gulp.src('_sass/screen.scss')
     .pipe(plumber(plumberOptions))
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('assets/css'));
+    .pipe(gulp.dest('css'));
 });
 
 gulp.task('site:css', function() {
-  return gulp.src('assets/css/**/*.css')
+  return gulp.src('css/**/*.css')
     .pipe(csscomb('.csscomb.dist.json'))
     .pipe(cssnano())
-    .pipe(gulp.dest('assets/css'));
+    .pipe(gulp.dest('css'));
 });
 
 gulp.task('dist:css', function() {
-  return gulp.src('assets/_sass/hamburgers/hamburgers.scss')
+  return gulp.src('_sass/hamburgers/hamburgers.scss')
     .pipe(sass())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest('dist'))
@@ -56,7 +56,7 @@ gulp.task('dist:css', function() {
 });
 
 gulp.task('eslint', function() {
-  return gulp.src('assets/_js/**/*.js')
+  return gulp.src('_js/**/*.js')
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -64,20 +64,20 @@ gulp.task('eslint', function() {
 
 gulp.task('concat', ['eslint'], function() {
   return gulp.src([
-      'assets/_js/hamburgers.js'
+      '_js/hamburgers.js'
     ])
     .pipe(sourcemaps.init())
     .pipe(concat('hamburgers.js'))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('assets/js'));
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('site:js', function() {
   return gulp.src([
-      'assets/_js/**/*.js',
+      '_js/**/*.js',
     ])
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js'));
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('watch', function() {
@@ -85,8 +85,8 @@ gulp.task('watch', function() {
 
   browserSync.init(browserSyncConfig);
 
-  gulp.watch('assets/_sass/**/*.scss', ['sass']);
-  gulp.watch('assets/_js/**/*.js', ['concat']);
+  gulp.watch('_sass/**/*.scss', ['sass']);
+  gulp.watch('_js/**/*.js', ['concat']);
 });
 
 gulp.task('build', ['sass', 'concat']);
