@@ -111,6 +111,7 @@
 
 }
 
+.browsers,
 .types {
   padding-left: 0;
   list-style: none;
@@ -118,6 +119,11 @@
   li {
     margin-bottom: 0.25em;
   }
+}
+
+.browsers {
+  padding-left: 1em;
+  column-count: 2;
 }
 
 .hint {
@@ -129,9 +135,19 @@
   }
 }
 
+@media only screen and (min-width: 320px) {
+  .browsers {
+    column-count: 2;
+  }
+}
+
 @media only screen and (min-width: 480px) {
   .types {
     column-count: 2;
+  }
+
+  .browsers {
+    column-count: 3;
   }
 }
 
