@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
-<nav class="nav">
-  <div class="nav-logo">
-    <div data-class="0" class="hamburger hamburger--nav">
+<header class="header" role="banner">
+  <div class="header-logo">
+    <div data-class="0" class="hamburger hamburger--header">
       <div class="hamburger-box">
         <div class="hamburger-inner"></div>
       </div>
     </div>
-    <span class="nav-text">amburgers</span>
+    <span class="header-text"><span class="header-text-h">h</span>amburgers</span>
   </div>
-</nav>
+</header>
 
-<main class="main">
+<main class="main" role="main">
   <section class="section section--information">
     <h1>Tasty CSS-animated hamburgers</h1>
     <span class="information-directions">Click (or tap) each one to see it animate.</span>
@@ -111,11 +111,10 @@
     <div class="content">
       <h2>Usage</h2>
       <p>Using Hamburgers for your site is easy (well, that was my intention anyway).
-
       <ol>
         <li>
           <p>Download and include the CSS in the <code>&lt;head&gt;</code> of your site:</p>
-<pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"hamburgers.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+<pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"css/hamburgers.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 </code></pre>
         </li>
         <li>
@@ -163,8 +162,7 @@
 
           <p>Since the class name would have to be toggled via JavaScript and implementation would differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you. <a class="js-hint">Stuck? Here‘s a hint.</a></p>
           <div id="hint" class="hint">
-
-          <p>Here’s a snippet of how to toggle a class name on click with JavaScript:</p>
+            <p>Here’s a snippet of how to toggle a class name on click with JavaScript:</p>
 <pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
   <span class="c1">// Look for .hamburger</span>
   <span class="kd">var</span> <span class="nx">hamburger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">".hamburger"</span><span class="p">);</span>
@@ -187,7 +185,6 @@
   <span class="p">});</span>
 <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
 </span></code></pre>
-
           </div>
         </li>
       </ol>
@@ -211,11 +208,32 @@
         </li>
       </ol>
       <p>Not satisfied? Dig into <code>_base.scss</code> or <code>types/</code> and customize to your heart’s content. Fair warning: It‘s pretty delicate and may break, especially if you tweak the animations themselves.</p>
+
+      <h2>Accessibility</h2>
+      <p>Hamburger menu icons can be useful in the right context, but they’re not the most accessible. One way is to add a “menu” label to accompany the hamburger.</p>
+      <div class="hamburger-wrap">
+        <div class="hamburger hamburger--collapse hamburger--accessible js-hamburger" aria-labelledby="hamburger-label">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+          <span id="hamburger-label" class="hamburger-label">Menu</span>
+        </div>
+      </div>
+      <br>
+      <p>Another way is to use ARIA.</p>
+<pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger hamburger--elastic"</span>
+     <span class="na">arial-label=</span><span class="s">"Menu"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+      <p>A combination of the two is ideal. Here are <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">some</a> <a href="https://webaccessibility.withgoogle.com/course">resources</a> on <a href="http://a11yproject.com/">web</a> <a href="http://www.html5accessibility.com/">accessibility</a> and <a href="https://w3c.github.io/aria-in-html/">ARIA</a>.</p>
     </div>
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   Chef <a href="https://jonsuh.com">Jonathan Suh</a>, <a href="https://twitter.com">@jonsuh</a> <br> <a href="https://github.com/jonsuh/hamburgers">Recipe on Github</a>
 </footer>
 

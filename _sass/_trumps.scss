@@ -10,9 +10,10 @@
   }
 }
 
-.hamburger--nav {
+.hamburger--header {
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 0;
+  margin-right: -5px;
   vertical-align: middle;
   cursor: default;
 
@@ -36,8 +37,37 @@
   }
 }
 
-.hamburger-example-wrap {
+.hamburger-wrap {
   text-align: center;
+}
+
+.hamburger--accessible {
+  display: inline-block;
+
+  .hamburger-box {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .hamburger-inner {
+    &,
+    &::before,
+    &::after {
+      background-color: $grey-darkest;
+    }
+  }
+}
+
+.hamburger-label {
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.hamburger-label-hidden {
+  display: none;
 }
 
 .hamburger--example {

@@ -75,22 +75,26 @@
 
 
 
-// Nav
+// Header
 // ==================================================
-.nav {
+.header {
   text-align: center;
   background-color: #f4f4f4;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.nav-text {
+.header-text {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   display: inline-block;
   vertical-align: middle;
+}
+
+.header-text-h {
+  visibility: hidden;
 }
 
 

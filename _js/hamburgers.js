@@ -189,7 +189,7 @@
 
       shuffle(classes);
 
-      var logo = document.querySelector(".hamburger--nav");
+      var logo = document.querySelector(".hamburger--header");
 
       window.requestInterval(function() {
         var current = parseInt(logo.getAttribute("data-class"), 10);

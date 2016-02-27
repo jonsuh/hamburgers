@@ -59,11 +59,6 @@ ol {
 li {
   padding-left: 0.25em;
   margin-bottom: 1em;
-
-  p,
-  pre {
-    margin-bottom: 0.5em;
-  }
 }
 
 code,
@@ -92,6 +87,10 @@ pre {
     font-weight: 600;
     background-color: transparent;
   }
+}
+
+p + pre {
+  margin-top: -1em;
 }
 
 mark {
