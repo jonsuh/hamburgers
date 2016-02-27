@@ -120,6 +120,10 @@
   }
 }
 
+.footer-separator {
+  display: none;
+}
+
 @media only screen and (min-width: 480px) {
   .footer {
     font-size: 15px;
@@ -129,10 +133,13 @@
     br {
       display: none;
     }
+  }
 
-    a:last-of-type {
-      margin-left: 20px;
-    }
+  .footer-separator {
+    color: $grey;
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
