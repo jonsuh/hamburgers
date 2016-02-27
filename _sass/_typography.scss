@@ -47,9 +47,14 @@ p,
 ol,
 ul,
 pre {
-  font-size: 15px;
   margin-bottom: 1.5em;
   margin-top: 0;
+}
+
+p,
+ol,
+ul {
+  font-size: 15px;
 }
 
 ol {
@@ -73,6 +78,7 @@ code {
 }
 
 pre {
+  font-size: 14px;
   color: #586e75;
   padding: 10px;
   -webkit-overflow-scrolling: touch;
@@ -104,6 +110,12 @@ pre {
   & + h2,
   & + h3 {
     margin-top: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  pre {
+    font-size: 15px;
   }
 }
 
