@@ -3,7 +3,7 @@ module.exports = {
     baseDir: "./"
   },
   "files": [
-    "assets/css/**/*.css"
+    "css/**/*.css"
   ],
   "browser": "default",
   "injectChanges": true,
