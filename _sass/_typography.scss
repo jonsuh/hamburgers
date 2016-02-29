@@ -63,7 +63,7 @@ ol {
 
 li {
   padding-left: 0.25em;
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
 }
 
 code,
@@ -96,12 +96,13 @@ pre {
   }
 }
 
-p + pre {
-  margin-top: -1em;
-}
-
 mark {
 
+}
+
+small {
+  font-size: 85%;
+  color: $grey;
 }
 
 ol,
@@ -110,6 +111,18 @@ pre {
   & + h2,
   & + h3 {
     margin-top: 2.5em;
+  }
+}
+
+li {
+  > p {
+    margin-bottom: 0;
+  }
+
+  > p + pre,
+  ul,
+  ol {
+    margin-top: 0.5em;
   }
 }
 
