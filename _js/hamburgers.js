@@ -163,7 +163,7 @@
         });
       }
 
-      Hamburgers.navAnimate();
+      Hamburgers.headerAnimate();
 
       document.querySelector(".js-hint").addEventListener("click", Hamburgers.hintHandle, false);
     },
@@ -182,7 +182,10 @@
       document.getElementById("hint").classList.add("is-visible");
     },
 
-    navAnimate: function() {
+    headerAnimateDelay: 200,
+    headerAnimateInterval: 3250,
+
+    headerAnimate: function() {
       var classes = [
         "slider", "squeeze", "arrow", "arrowalt", "spin", "elastic", "emphatic", "collapse", "vortex", "boring"
       ];
@@ -191,7 +194,14 @@
 
       var logo = document.querySelector(".hamburger--header");
 
-      window.requestInterval(function() {
+      var animateTimer = window.requestInterval(animate, Hamburgers.headerAnimateDelay);
+
+      window.requestTimeout(function() {
+        window.clearRequestInterval(animateTimer);
+        animateTimer = window.requestInterval(animate, Hamburgers.headerAnimateInterval);
+      }, Hamburgers.headerAnimateDelay);
+
+      function animate() {
         var current = parseInt(logo.getAttribute("data-class"), 10);
 
         logo.classList.add("hamburger--" + classes[current]);
@@ -214,7 +224,7 @@
             }, 750);
           }, 1000);
         }, 750);
-      }, 3250);
+      }
     }
   };
 
