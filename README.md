@@ -84,6 +84,15 @@ I’ve also included `.scss` source files if you use Sass as your CSS precompile
 4. Customize your hamburger and/or remove any types you don’t want in `hamburgers.scss`.
 5. Compile your Sass*, and voila!
 
+<p>Hamburgers is also available via [npm](https://www.npmjs.com/package/hamburgers) <code>npm install hamburgers</code> and [Bower](http://bower.io/search/?q=css-hamburgers) <code>bower install css-hamburgers</code>.</p>
+
+Hamburgers is also available on [npm](https://www.npmjs.com/package/hamburgers) and [Bower](http://bower.io/search/?q=css-hamburgers).
+
+```
+npm install hamburgers
+bower install css-hamburgers
+```
+
 \* Be sure to run the CSS through [Autoprefixer](https://github.com/postcss/autoprefixer) since the Sass doesn’t account for vendor prefixes.
 
 ### Customization
