@@ -127,7 +127,7 @@ You can also create a separate file (e.g. `hamburgers-settings.scss`) with those
 
 #### `ems` or `rems`
 
-Wanna work with `ems` or `rems` instead of `px`? Just change all the `px` values to the unit of your choice. Note: Be consistent (all `px` or all `ems`), otherwise it’ll break because the math behind the customization will fail if it attempts to perform operations with values of different units.
+Wanna work with `ems` or `rems` instead of `px`? Just change all the `px` values to the unit of your choice. Note: Be consistent (all `px` or all `ems`), otherwise it may break—the math behind the customization will fail if it attempts to perform operations with values of different units.
 
 ### Not satisfied?
 
