@@ -97,7 +97,7 @@ $hamburger-layer-width                     : 40px !default;
 $hamburger-layer-height                    : 4px !default;
 $hamburger-layer-spacing                   : 6px !default;
 $hamburger-layer-color                     : #000 !default;
-$hamburger-layer-border-radius             : 2px !default;
+$hamburger-layer-border-radius             : 4px !default;
 $hamburger-hover-opacity                   : 0.7 !default;
 $hamburger-hover-transition-duration       : 0.15s !default;
 $hamburger-hover-transition-timing-function: linear !default;
