@@ -251,8 +251,41 @@
           <p>Compile your Sass*, and voila!</p>
         </li>
       </ol>
-      <p>Not satisfied? Dig into <code>_base.scss</code> or <code>types/</code> and customize to your heart’s content. Fair warning: It‘s pretty delicate and may break, especially if you tweak the animations themselves.</p>
       <p><small>* Be sure to run the CSS through <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> since the Sass doesn’t account for vendor prefixes.</small></p>
+
+      <h3>Customization</h3>
+
+      <p>Here is the full list of default settings (found in <code>_sass/hamburgers/hamburgers.scss</code>);</p>
+<pre class="highlight"><code><span class="nv">$hamburger-padding-x</span>                       <span class="p">:</span> <span class="m">15px</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-padding-y</span>                       <span class="p">:</span> <span class="m">15px</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-layer-width</span>                     <span class="p">:</span> <span class="m">40px</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-layer-height</span>                    <span class="p">:</span> <span class="m">4px</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-layer-spacing</span>                   <span class="p">:</span> <span class="m">6px</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-layer-color</span>                     <span class="p">:</span> <span class="mh">#000</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-hover-opacity</span>                   <span class="p">:</span> <span class="m">0</span><span class="mi">.7</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-hover-transition-duration</span>       <span class="p">:</span> <span class="m">0</span><span class="mi">.15s</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-hover-transition-timing-function</span><span class="p">:</span> <span class="n">linear</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="c1">// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+</span><span class="nv">$hamburger-hover-use-filter</span><span class="p">:</span> <span class="bp">false</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+<span class="nv">$hamburger-hover-filter</span>    <span class="p">:</span> <span class="nf">opacity</span><span class="p">(</span><span class="m">50%</span><span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+</code></pre>
+
+      <p>To override any default settings, you can change the value(s) within `hamburgers.scss`, but I recommend you declare your new settings separately:</p>
+<pre class="highlight"><code><span class="k">@import</span> <span class="s2">"path/to/hamburgers"</span><span class="p">;</span>
+
+<span class="nv">$hamburgers-padding-x</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+<span class="nv">$hamburgers-padding-y</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+</code></pre>
+
+      <p>You can also create a separate file (e.g. hamburgers-settings.scss) with those declarations, then import it along with Hamburgers:</p>
+<pre class="highlight"><code><span class="k">@import</span> <span class="s2">"path/to/hamburgers"</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">"hamburgers-settings"</span>
+</code></pre>
+
+      <p>Not satisfied? Dig into <code>_base.scss</code> or <code>types/</code> and customize to your heart’s content. Fair warning: It‘s pretty delicate and may break, especially if you tweak the animations themselves.</p>
 
       <h2>Accessibility</h2>
       <p>Hamburger menu icons can be useful in the right context, but they’re not the most accessible. A label can help make it more obvious that it toggles a menu.</p>
