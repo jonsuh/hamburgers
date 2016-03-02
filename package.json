@@ -26,7 +26,11 @@
   },
   "ignore": [
     "**/.*",
-    "node_modules"
+    "node_modules",
+    "*.mp4",
+    "*.ogv",
+    "*.webm",
+    "hamburger.png"
   ],
   "dependencies": {},
   "devDependencies": {
