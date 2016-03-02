@@ -1,5 +1,33 @@
 {
-  "name": "gulp-starter",
+  "name": "hamburgers",
+  "version": "0.1.0",
+  "description": "Collection of tasty CSS-animated hamburger icons. Includes Sass files (modular and customizable), so cook up your own hamburger.",
+  "license": "MIT",
+  "author": {
+    "name": "Jonathan Suh",
+    "email": "hello@jonsuh.com",
+    "url": "https://jonsuh.com/hamburgers"
+  },
+  "main": "_sass/hamburgers/hamburgers.scss",
+  "keywords": [
+    "css",
+    "hamburger",
+    "hamburgers",
+    "menu",
+    "sass",
+    "scss"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonsuh/hamburgers"
+  },
+  "bugs": {
+    "url": "https://github.com/jonsuh/hamburgers/issues"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.11.1",
