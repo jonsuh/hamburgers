@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+js
+css
+*.mp4
+*.ogv
+*.webm
+favicon.ico
+hamburger.png
+index.html
