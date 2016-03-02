@@ -108,7 +108,7 @@ $hamburger-hover-use-filter: false !default;
 $hamburger-hover-filter    : opacity(50%) !default;
 ```
 
-To override any default settings, you can change the value(s) within`hamburgers.scss`, but I recommend you declare your new settings separately:
+To override any default settings, you can change the value(s) within `hamburgers.scss`, but I recommend you declare your new settings separately:
 
 ```scss
 @import "path/to/hamburgers";
