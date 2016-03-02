@@ -125,7 +125,13 @@ You can also create a separate file (e.g. `hamburgers-settings.scss`) with those
 @import "hamburgers-settings"
 ```
 
-Not satisfied? Dig into `_base.scss` or `types/` and customize to your heart’s content. Fair warning: It‘s pretty delicate and may break, especially if you tweak the animations themselves.
+#### `ems` or `rems`
+
+Wanna work with `ems` or `rems` instead of `px`? Just change all the `px` values to the unit of your choice. Note: Be consistent (all `px` or all `ems`), otherwise it’ll break because the math behind the customization will fail while attempting to perform operations with values of different units.
+
+### Not satisfied?
+
+Dig into `_base.scss` or `types/` and customize to your heart’s content. Fair warning: It‘s pretty delicate and may break, especially if you tweak the animations themselves.
 
 ## Accessibility
 
