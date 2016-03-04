@@ -4,6 +4,13 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 
 ![](http://i.imgur.com/Ph0ndte.gif)
 
+### Table of Contents
+
+- [Usage](#usage)
+- [Customization](#customization)
+- [Accessibility](#accessibility)
+- [Browser Support](#browser-support)
+
 ## Usage
 
 1. [Download](https://github.com/jonsuh/hamburgers/blob/master/dist/hamburgers.css) and include the CSS in the `<head>` of your site:
@@ -15,7 +22,17 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 2. Add the base hamburger markup:
 
   ```html
-  <div class="hamburger">
+  <button class="hamburger" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>  
+  ```
+
+  You *can* use `<div>`s if you insist, but they’re not [accessible](#accessibility) as a menu button.
+
+  ```html
+  <div class="hamburger" type="button">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
     </div>
@@ -25,11 +42,11 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 3. Append the class name of the type of hamburger you’re craving:
 
   ```html
-  <div class="hamburger hamburger--collapse">
-    <div class="hamburger-box">
-      <div class="hamburger-inner"></div>
-    </div>
-  </div>
+  <button class="hamburger hamburger--collapse" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
   ```
 
   Here’s the list of hamburger-type classes you can choose from:
@@ -60,11 +77,11 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 4. Trigger the active state by appending class name `is-active`:
 
   ```html
-  <div class="hamburger hamburger--collapse is-active">
-    <div class="hamburger-box">
-      <div class="hamburger-inner"></div>
-    </div>
-  </div>
+  <button class="hamburger hamburger--collapse is-active" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
   ```
 
   Since the class name would have to be toggled via JavaScript and implementation would differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you.
@@ -83,8 +100,6 @@ I’ve also included `.scss` source files if you use Sass as your CSS precompile
 
 4. Customize your hamburger and/or remove any types you don’t want in `hamburgers.scss`.
 5. Compile your Sass*, and voila!
-
-Hamburgers is also available via [npm](https://www.npmjs.com/package/hamburgers) `npm install hamburgers` and [Bower](http://bower.io/search/?q=css-hamburgers) `bower install css-hamburgers`.
 
 Hamburgers is also available on [npm](https://www.npmjs.com/package/hamburgers) and [Bower](http://bower.io/search/?q=css-hamburgers).
 
@@ -144,18 +159,23 @@ Dig into `_base.scss` or `types/` and customize to your heart’s content. Fair 
 
 ## Accessibility
 
-Hamburger menu icons can be useful in the right context, but they’re not the most accessible. A label can help make it more obvious that it toggles a menu.
-
-```html
-<div class="hamburger hamburger--collapse">
-  <div class="hamburger-box">
-    <div class="hamburger-inner"></div>
-  </div>
-  <span class="hamburger-label">Menu</span>
-</div>
-```
+Hamburger menu icons can be useful in the right context, but they’re not the most accessible.
 
 ARIA will help make it accessible to people with disabilities.
+
+```html
+<button class="hamburger hamburger--elastic" type="button"
+        aria-label="Menu" aria-controls="navigation">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+<nav id="navigation">
+  <!--navigation goes here-->
+</nav>
+```
+
+If you insist on using `<div>`s, by default they’re not focusable (i.e. via keyboard or assistive technology). Add the `tabindex` attribute alongside ARIA.
 
 ```html
 <div class="hamburger hamburger--elastic" tabindex="0"
@@ -169,8 +189,19 @@ ARIA will help make it accessible to people with disabilities.
 </nav>
 ```
 
+A label can help make it more obvious that it toggles a menu.
+
+```html
+<button class="hamburger hamburger--collapse" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+  <span class="hamburger-label">Menu</span>
+</button>
+```
+
 Here are [some](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) [resources](https://webaccessibility.withgoogle.com/course) on [web](http://a11yproject.com/) [accessibility](http://www.html5accessibility.com/) and [ARIA](https://w3c.github.io/aria-in-html/).
 
 ## Browser Support
 
-Animations use CSS3 3D transforms (`translate3d` whenever possible for GPU acceleration), which is supported by most browsers (not supported by IE9 and older and Opera Mini). For browser support, check [caniuse.com](http://caniuse.com/#search=translate3d).
+Animations use CSS3 3D transforms (`translate3d` whenever possible for GPU acceleration), which is supported by most browsers (not supported by IE9 and older and Opera Mini). For detailed browser support, check [caniuse.com](http://caniuse.com/#search=translate3d).
