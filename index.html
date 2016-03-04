@@ -147,7 +147,14 @@
         </li>
         <li>
           <p>Add the base hamburger markup:</p>
-<pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger"</span><span class="nt">&gt;</span>
+<pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hamburger"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hamburger-inner"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+          <p>You <em>can</em> use <code>&lt;div&gt;</code>s (if you insist), but they’re not <a href="#accessibility">accessible</a> as a menu button.</p>
+<pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -156,11 +163,11 @@
         </li>
         <li>
           <p>Append the class name of the type of hamburger you’re craving:
-<pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger <span class="accent">hamburger--collapse</span>"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hamburger hamburger--collapse"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hamburger-inner"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
 </code></pre>
           </p>
           <p>Here’s the list of hamburger-type classes you can choose from:</p>
@@ -188,11 +195,11 @@
         </li>
         <li>
           <p>Trigger the active state by appending class name <code>is-active</code>:
-<pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger hamburger--collapse <span class="accent">is-active</span>"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-inner"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hamburger hamburger--collapse is-active"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hamburger-inner"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
 </code></pre>
 
           <p>Since the class name would have to be toggled via JavaScript and implementation would differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you. <a class="js-hint">Stuck? Here‘s a hint.</a></p>
@@ -281,7 +288,7 @@ bower install css-hamburgers
 <span class="nv">$hamburger-hover-filter</span>    <span class="p">:</span> <span class="nf">opacity</span><span class="p">(</span><span class="m">50%</span><span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
 </code></pre>
 
-      <p>To override any default settings, you can change the value(s) within `hamburgers.scss`, but I recommend you declare your new settings separately:</p>
+      <p>To override any default settings, you can change the value(s) within <code>hamburgers.scss</code>, but I recommend you declare your new settings separately:</p>
 <pre class="highlight"><code><span class="k">@import</span> <span class="s2">"path/to/hamburgers"</span><span class="p">;</span>
 
 <span class="nv">$hamburgers-padding-x</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
@@ -302,17 +309,21 @@ bower install css-hamburgers
       <p>Dig into <code>_base.scss</code> or <code>types/</code> and customize to your heart’s content. Fair warning: It‘s pretty delicate and may break, especially if you tweak the animations themselves.</p>
 
       <h2 id="accessibility">Accessibility</h2>
-      <p>Hamburger menu icons can be useful in the right context, but they’re not the most accessible. A label can help make it more obvious that it toggles a menu.</p>
-      <div class="hamburger-wrap">
-        <div class="hamburger hamburger--collapse hamburger--accessible js-hamburger">
-          <div class="hamburger-box">
-            <div class="hamburger-inner"></div>
-          </div>
-          <span class="hamburger-label">Menu</span>
-        </div>
-      </div>
-      <br>
+      <p>Hamburger menu icons can be useful in the right context, but they’re not the most accessible.</p>
+
       <p>ARIA will help make it accessible to people with disabilities.</p>
+<pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"hamburger hamburger--elastic"</span> <span class="na">type=</span><span class="s">"button"</span>
+        <span class="na">aria-label=</span><span class="s">"Menu"</span> <span class="na">aria-controls=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"hamburger-inner"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+  <span class="c">&lt;!--navigation goes here--&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre>
+
+      <p>If you insist on using <code>&lt;div&gt;</code>s, by default they’re not focusable (i.e. via keyboard or assistive technology). Add the <code>tabindex</code> attribute alongside ARIA.</p>
 <pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger hamburger--elastic"</span> <span class="na">tabindex=</span><span class="s">"0"</span>
      <span class="na">aria-label=</span><span class="s">"Menu"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-controls=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hamburger-box"</span><span class="nt">&gt;</span>
@@ -323,10 +334,24 @@ bower install css-hamburgers
   <span class="c">&lt;!--navigation goes here--&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
 </code></pre>
+
+      <p>A label can help make it more obvious that it toggles a menu.</p>
+
+      <div class="hamburger-wrap">
+        <button class="hamburger hamburger--collapse hamburger--accessible js-hamburger" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+          <span class="hamburger-label">Menu</span>
+        </button>
+      </div>
+
+      <br>
+
       <p>Here are <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">some</a> <a href="https://webaccessibility.withgoogle.com/course">resources</a> on <a href="http://a11yproject.com/">web</a> <a href="http://www.html5accessibility.com/">accessibility</a> and <a href="https://w3c.github.io/aria-in-html/">ARIA</a>.</p>
 
       <h2>Browser Support</h2>
-      <p>Animations use CSS3 2D and 3D (<code>translate3d</code> whenever possible for GPU acceleration), which is supported by most browsers (not supported by IE9 and older and Opera Mini). For browser support, check <a href="http://caniuse.com/#search=translate3d">caniuse.com</a>.</p>
+      <p>Animations use CSS3 3D transforms (<code>translate3d</code> whenever possible for GPU acceleration), which is supported by most browsers (not supported by IE9 and older and Opera Mini). For detailed browser support, check <a href="http://caniuse.com/#search=translate3d">caniuse.com</a>.</p>
     </div>
   </section>
 </main>
