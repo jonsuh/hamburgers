@@ -84,7 +84,7 @@ I’ve also included `.scss` source files if you use Sass as your CSS precompile
 4. Customize your hamburger and/or remove any types you don’t want in `hamburgers.scss`.
 5. Compile your Sass*, and voila!
 
-<p>Hamburgers is also available via [npm](https://www.npmjs.com/package/hamburgers) <code>npm install hamburgers</code> and [Bower](http://bower.io/search/?q=css-hamburgers) <code>bower install css-hamburgers</code>.</p>
+Hamburgers is also available via [npm](https://www.npmjs.com/package/hamburgers) `npm install hamburgers` and [Bower](http://bower.io/search/?q=css-hamburgers) `bower install css-hamburgers`.
 
 Hamburgers is also available on [npm](https://www.npmjs.com/package/hamburgers) and [Bower](http://bower.io/search/?q=css-hamburgers).
 
@@ -158,7 +158,7 @@ Hamburger menu icons can be useful in the right context, but they’re not the m
 ARIA will help make it accessible to people with disabilities.
 
 ```html
-<div class="hamburger hamburger--elastic"
+<div class="hamburger hamburger--elastic" tabindex="0"
      aria-label="Menu" role="button" aria-controls="navigation">
   <div class="hamburger-box">
     <div class="hamburger-inner"></div>
