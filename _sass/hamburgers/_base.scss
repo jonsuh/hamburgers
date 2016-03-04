@@ -9,6 +9,15 @@
   transition-duration: $hamburger-hover-transition-duration;
   transition-timing-function: $hamburger-hover-transition-timing-function;
 
+  // Normalize (<button>)
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+
   &:hover {
     @if $hamburger-hover-use-filter == true {
       filter: $hamburger-hover-filter;
@@ -22,10 +31,12 @@
 .hamburger-box {
   width: $hamburger-layer-width;
   height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  display: inline-block;
   position: relative;
 }
 
 .hamburger-inner {
+  display: block;
   top: 50%;
   margin-top: $hamburger-layer-height / -2;
 
