@@ -7,11 +7,11 @@ Changelog for Hamburgers.
 - Supports and favors more accessible and semantic markup:
 
   ```
-  <div class="hamburger" type="button">
-    <div class="hamburger-box">
-      <div class="hamburger-inner"></div>
-    </div>
-  </div>
+  <button class="hamburger" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
   ```
 
 ## [0.1.6] - 03/02/2016
