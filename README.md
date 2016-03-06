@@ -52,6 +52,10 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   Here’s the list of hamburger-type classes you can choose from:
 
   ```
+  hamburger--3dx
+  hamburger--3dx-r
+  hamburger--3dy
+  hamburger--3dy-r
   hamburger--arrow
   hamburger--arrow-r
   hamburger--arrowalt
@@ -67,6 +71,10 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   hamburger--slider-r
   hamburger--spin
   hamburger--spin-r
+  hamburger--spring
+  hamburger--spring-r
+  hamburger--stand
+  hamburger--stand-r
   hamburger--squeeze
   hamburger--vortex
   hamburger--vortex-r
