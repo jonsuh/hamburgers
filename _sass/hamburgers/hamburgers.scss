@@ -31,6 +31,10 @@ $hamburger-hover-filter    : opacity(50%) !default;
 
 // Types (Remove or comment out what you don’t need)
 // ==================================================
+@import "types/3dx";
+@import "types/3dx-r";
+@import "types/3dy";
+@import "types/3dy-r";
 @import "types/arrow";
 @import "types/arrow-r";
 @import "types/arrowalt";
