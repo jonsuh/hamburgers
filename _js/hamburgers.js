@@ -187,7 +187,7 @@
 
     headerAnimate: function() {
       var classes = [
-        "slider", "squeeze", "arrow", "arrowalt", "spin", "elastic", "emphatic", "collapse", "vortex", "boring"
+        "slider", "squeeze", "arrow", "arrowalt", "spin", "elastic", "emphatic", "collapse", "vortex", "stand", "spring", "3dx", "3dy", "boring"
       ];
 
       shuffle(classes);

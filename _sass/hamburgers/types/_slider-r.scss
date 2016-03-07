@@ -3,7 +3,7 @@
  */
 .hamburger--slider-r {
   .hamburger-inner {
-    top: 0;
+    top: $hamburger-layer-height / 2;
 
     &::before {
       top: $hamburger-layer-height + $hamburger-layer-spacing;

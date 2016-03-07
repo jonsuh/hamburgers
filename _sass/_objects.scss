@@ -15,7 +15,7 @@
   position: relative;
 }
 .tray:nth-child(1) {
-  background-color: $purple;
+  background-color: $plum;
 }
 .tray:nth-child(2) {
   background-color: $teal;
@@ -42,7 +42,28 @@
   background-color: $green;
 }
 .tray:nth-child(10) {
+  background-color: $indigo;
+}
+.tray:nth-child(11) {
+  background-color: $cyan;
+}
+.tray:nth-child(12) {
+  background-color: $red;
+}
+.tray:nth-child(13) {
+  background-color: $purple;
+}
+.tray:nth-child(14) {
   background-color: $brown;
+}
+
+.tray--empty {
+  border: 1px dashed $grey;
+  background-color: transparent;
+  display: none;
+}
+.tray--empty + .tray--empty {
+  border-left: 0;
 }
 
 .section {
@@ -68,6 +89,10 @@
     width: 20%;
     padding-top: 5em + 1.75em;
     padding-bottom: 5em;
+  }
+
+  .tray--empty {
+    display: block;
   }
 }
 
