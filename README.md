@@ -32,7 +32,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   You *can* use `<div>`s if you insist, but they’re not [accessible](#accessibility) as a menu button.
 
   ```html
-  <div class="hamburger" type="button">
+  <div class="hamburger">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
     </div>
