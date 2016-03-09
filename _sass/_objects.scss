@@ -48,15 +48,18 @@
   background-color: $cyan;
 }
 .tray:nth-child(12) {
-  background-color: $red;
+  background-color: $grey-darkest;
 }
 .tray:nth-child(13) {
-  background-color: $purple;
+  background-color: $red;
 }
 .tray:nth-child(14) {
-  background-color: $plum;
+  background-color: $purple;
 }
 .tray:nth-child(15) {
+  background-color: $plum;
+}
+.tray:nth-child(16) {
   background-color: $brown;
 }
 

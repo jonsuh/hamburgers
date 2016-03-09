@@ -1,0 +1,46 @@
+/*
+ * Rounded
+ */
+.hamburger--rounded {
+  .hamburger-inner {
+    border: 0px solid transparent;
+
+    &, &:after, &:before {
+      transition-property: all;
+      transition-duration: .2s;
+      transition-timing-function: ease-out;
+      transform-style: preserve-3d;   
+    }
+
+    &::before, &:after {
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  &.is-active {
+    .hamburger-inner {
+      height: $hamburger-layer-width;
+      width: $hamburger-layer-width;
+
+      transform: translateY(-($hamburger-layer-width - $hamburger-layer-height) / 2);
+
+      background: transparent;
+      border-radius: 50%;
+      border-width: $hamburger-layer-height;
+      border-style: solid;
+      
+      &::before {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) rotate(-135deg) scaleX(0.5);
+      }
+
+      &::after {
+        bottom: 50%;
+        left: 50%;
+        transform: translate3d(-50%, 50%, 0) rotate(135deg) scaleX(0.5);
+      }
+    }
+  }
+}
