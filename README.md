@@ -139,22 +139,53 @@ $hamburger-hover-transition-timing-function: linear !default;
 // change the value of $hamburger-hover-filter accordingly.
 $hamburger-hover-use-filter: false !default;
 $hamburger-hover-filter    : opacity(50%) !default;
+
+// Remove or comment out the hamburger types you don’t want
+// or need, so they get excluded from the compiled CSS.
+$hamburger-types: (
+  3dx,
+  3dx-r,
+  3dy,
+  3dy-r,
+  arrow,
+  arrow-r,
+  arrowalt,
+  arrowalt-r,
+  boring,
+  collapse,
+  collapse-r,
+  elastic,
+  elastic-r,
+  emphatic,
+  emphatic-r,
+  slider,
+  slider-r,
+  spring,
+  spring-r,
+  stand,
+  stand-r,
+  spin,
+  spin-r,
+  squeeze,
+  vortex,
+  vortex-r
+) !default;
 ```
 
-To override any default settings, you can change the value(s) within `hamburgers.scss`, but I recommend you declare your new settings separately:
+To override any default settings, you can change the value(s) within `hamburgers.scss`, but I recommend you declare your new settings separately. Settings must come before `@import`:
 
 ```scss
-@import "path/to/hamburgers";
-
 $hamburgers-padding-x: 20px;
 $hamburgers-padding-y: 15px;
+
+@import "path/to/hamburgers";
 ```
 
 You can also create a separate file (e.g. `hamburgers-settings.scss`) with those declarations, then import it along with Hamburgers:
 
 ```scss
-@import "path/to/hamburgers";
 @import "hamburgers-settings"
+@import "path/to/hamburgers";
 ```
 
 #### `ems` or `rems`

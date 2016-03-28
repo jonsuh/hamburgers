@@ -327,18 +327,48 @@ bower install css-hamburgers
 // change the value of $hamburger-hover-filter accordingly.
 </span><span class="nv">$hamburger-hover-use-filter</span><span class="p">:</span> <span class="bp">false</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
 <span class="nv">$hamburger-hover-filter</span>    <span class="p">:</span> <span class="nf">opacity</span><span class="p">(</span><span class="m">50%</span><span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
-</code></pre>
 
-      <p>To override any default settings, you can change the value(s) within <code>hamburgers.scss</code>, but I recommend you declare your new settings separately:</p>
-<pre class="highlight"><code><span class="k">@import</span> <span class="s2">"path/to/hamburgers"</span><span class="p">;</span>
+<span class="c1">// Types (Remove or comment out what you don’t need)
+</span><span class="nv">$hamburger-types</span><span class="p">:</span> <span class="p">(</span>
+  <span class="m">3dx</span><span class="o">,</span>
+  <span class="m">3dx-r</span><span class="o">,</span>
+  <span class="m">3dy</span><span class="o">,</span>
+  <span class="m">3dy-r</span><span class="o">,</span>
+  <span class="m">arrow</span><span class="o">,</span>
+  <span class="m">arrow-r</span><span class="o">,</span>
+  <span class="m">arrowalt</span><span class="o">,</span>
+  <span class="m">arrowalt-r</span><span class="o">,</span>
+  <span class="m">boring</span><span class="o">,</span>
+  <span class="m">collapse</span><span class="o">,</span>
+  <span class="m">collapse-r</span><span class="o">,</span>
+  <span class="m">elastic</span><span class="o">,</span>
+  <span class="m">elastic-r</span><span class="o">,</span>
+  <span class="m">emphatic</span><span class="o">,</span>
+  <span class="m">emphatic-r</span><span class="o">,</span>
+  <span class="m">slider</span><span class="o">,</span>
+  <span class="m">slider-r</span><span class="o">,</span>
+  <span class="m">spring</span><span class="o">,</span>
+  <span class="m">spring-r</span><span class="o">,</span>
+  <span class="m">stand</span><span class="o">,</span>
+  <span class="m">stand-r</span><span class="o">,</span>
+  <span class="m">spin</span><span class="o">,</span>
+  <span class="m">spin-r</span><span class="o">,</span>
+  <span class="m">squeeze</span><span class="o">,</span>
+  <span class="m">vortex</span><span class="o">,</span>
+  <span class="m">vortex-r</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre>
 
-<span class="nv">$hamburgers-padding-x</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+      <p>To override any default settings, you can change the value(s) within <code>hamburgers.scss</code>, but I recommend you declare your new settings separately. Settings must come before <code>@import</code>:</p>
+<pre class="highlight"><code><span class="nv">$hamburgers-padding-x</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
 <span class="nv">$hamburgers-padding-y</span><span class="p">:</span> <span class="m">15px</span><span class="p">;</span>
+<span class="nv">$hamburger-types</span><span class="p">     :</span> <span class="p">(</span><span class="m">collapse</span><span class="p">);</span>
+
+<span class="k">@import</span> <span class="s2">"path/to/hamburgers"</span><span class="p">;</span>
 </code></pre>
 
-      <p>You can also create a separate file (e.g. hamburgers-settings.scss) with those declarations, then import it along with Hamburgers:</p>
-<pre class="highlight"><code><span class="k">@import</span> <span class="s2">"path/to/hamburgers"</span><span class="p">;</span>
-<span class="k">@import</span> <span class="s2">"hamburgers-settings"</span>
+      <p>You can also create a separate file (e.g. <code>hamburgers-settings.scss</code>) with those declarations, then import it along with Hamburgers:</p>
+<pre class="highlight"><code><span class="k">@import</span> <span class="s2">"hamburgers-settings"</span>
+<span class="k">@import</span> <span class="s2">"path/to/hamburgers"</span><span class="p">;</span>
 </code></pre>
 
       <h3><code>ems</code> or <code>rems</code></h3>
