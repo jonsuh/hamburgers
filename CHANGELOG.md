@@ -2,6 +2,17 @@
 
 Changelog for Hamburgers.
 
+## [0.5.0] - 04/04/2016
+### Fixed
+- `Error: Import directives may not be used within control directives or mixins.` in certain cases like when compiling with Ruby Sass.  
+Solution: `@import` all available types and instead nest Sass for each type in `@if` directive which checks to see if the type exists in `$hamburger-types`. e.g.:  
+```scss
+@if index($hamburger-types, 3dx) {
+   .hamburger--3dx {
+   }
+}
+```
+
 ## [0.4.0] - 03/28/2016
 ### Improved
 - Customize the including/excluding of hamburger types in settings as `$hamburger-types` Sass list (e.g. If someone includes Hamburgers via npm or Bower, they don’t have to modify the source files in `node_modules` or `bower_components`.)
