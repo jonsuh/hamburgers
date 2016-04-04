@@ -60,83 +60,47 @@ $hamburger-types: (
 // ==================================================
 @import "base";
 
-// Include/exclude based on $hamburger-types
+// Hamburger types (Each should have an @if directive
 // ==================================================
-@if index($hamburger-types, 3dx) {
-  @import "types/3dx";
-}
-@if index($hamburger-types, 3dx-r) {
-  @import "types/3dx-r";
-}
-@if index($hamburger-types, 3dy) {
-  @import "types/3dy";
-}
-@if index($hamburger-types, 3dy-r) {
-  @import "types/3dy-r";
-}
-@if index($hamburger-types, arrow) {
-  @import "types/arrow";
-}
-@if index($hamburger-types, arrow-r) {
-  @import "types/arrow-r";
-}
-@if index($hamburger-types, arrowalt) {
-  @import "types/arrowalt";
-}
-@if index($hamburger-types, arrowalt-r) {
-  @import "types/arrowalt-r";
-}
-@if index($hamburger-types, boring) {
-  @import "types/boring";
-}
-@if index($hamburger-types, collapse) {
-  @import "types/collapse";
-}
-@if index($hamburger-types, collapse-r) {
-  @import "types/collapse-r";
-}
-@if index($hamburger-types, elastic) {
-  @import "types/elastic";
-}
-@if index($hamburger-types, elastic-r) {
-  @import "types/elastic-r";
-}
-@if index($hamburger-types, emphatic) {
-  @import "types/emphatic";
-}
-@if index($hamburger-types, emphatic-r) {
-  @import "types/emphatic-r";
-}
-@if index($hamburger-types, slider) {
-  @import "types/slider";
-}
-@if index($hamburger-types, slider-r) {
-  @import "types/slider-r";
-}
-@if index($hamburger-types, spring) {
-  @import "types/spring";
-}
-@if index($hamburger-types, spring-r) {
-  @import "types/spring-r";
-}
-@if index($hamburger-types, stand) {
-  @import "types/stand";
-}
-@if index($hamburger-types, stand-r) {
-  @import "types/stand-r";
-}
-@if index($hamburger-types, spin) {
-  @import "types/spin";
-}
-@if index($hamburger-types, spin-r) {
-  @import "types/spin-r";
-}
-@if index($hamburger-types, squeeze) {
-  @import "types/squeeze";
-}
-@if index($hamburger-types, vortex) {
-  @import "types/vortex";
-}
-@if index($hamburger-types, vortex-r) {
-  @import "types/vortex-r";
-}
+@import "types/3dx";
+@import "types/3dx-r";
+@import "types/3dy";
+@import "types/3dy-r";
+@import "types/arrow";
+@import "types/arrow-r";
+@import "types/arrowalt";
+@import "types/arrowalt-r";
+@import "types/boring";
+@import "types/collapse";
+@import "types/collapse-r";
+@import "types/elastic";
+@import "types/elastic-r";
+@import "types/emphatic";
+@import "types/emphatic-r";
+@import "types/slider";
+@import "types/slider-r";
+@import "types/spring";
+@import "types/spring-r";
+@import "types/stand";
+@import "types/stand-r";
+@import "types/spin";
+@import "types/spin-r";
+@import "types/squeeze";
+@import "types/vortex";
+@import "types/vortex-r";
+
+// ==================================================
+// Cooking up additional types:
+//
+// The Sass for each hamburger type should be nested
+// inside an @if directive to check whether or not
+// it exists in $hamburger-types so only the CSS for
+// included types are generated.
+//
+// e.g. hamburgers/types/_new-type.scss
+//
+// @if index($hamburger-types, new-type) {
+//   .hamburger--new-type {
+//     ...
+//   }
+// }
