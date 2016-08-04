@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
   <title>Hamburgers by Jonathan Suh</title>
-  <link rel="stylesheet" href="css/screen.css">
+  <style amp-custom>
+    /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}footer,header,main,nav,section{display:block}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:700}h1{font-size:2em;margin:.67em 0}mark{color:#000;background:#ff0}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,pre{font-family:monospace;font-size:1em}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}video{width:100%;margin-bottom:1.5em}body{font-family:-apple-system,\.SFNSDisplay-Regular,Roboto,Helvetica,Arial,sans-serif;color:#222}h1,h2,h3{margin-top:0}h1{font-size:18px;margin-bottom:.5em}h2{font-size:17px}h2,h3{margin-bottom:1em}h3{font-size:16px}p{font-size:15px;line-height:1.4;margin-top:0;margin-bottom:1.5em}a{cursor:pointer;text-decoration:underline;color:#2196f3}a:hover{color:#ff5722}ol,p,pre,ul{margin-top:0;margin-bottom:1.5em}ol,p,ul{font-size:15px}ol{padding-left:1.5em}li{margin-bottom:.75em;padding-left:.25em}code,pre{font-family:Consolas,Liberation Mono,Courier,monospace;border-radius:3px;background-color:#f7f7f7}code{padding:3px 5px}pre{font-size:14px;padding:10px;color:#586e75;-webkit-overflow-scrolling:touch}pre code{padding:0;border-radius:0}pre code,pre span.accent{background-color:transparent}pre span.accent{font-weight:600;color:#000}small{font-size:85%;color:#999}ol+h2,ol+h3,pre+h2,pre+h3,ul+h2,ul+h3{margin-top:2.5em}li>p{margin-bottom:0}li>p+pre,li ol,li ul{margin-top:.5em}@media only screen and (min-width:480px){pre{font-size:15px}}@media only screen and (min-width:640px){h1{font-size:21px}h2{font-size:19px}h3{font-size:17px}ol,p,pre,ul{font-size:16px}}.section{padding-top:30px;padding-bottom:30px;text-align:center}.section:nth-child(1){background-color:#fff}.section--information{padding-bottom:0;}.content{max-width:600px;margin-right:auto;margin-left:auto;padding-right:15px;padding-left:15px;text-align:left}.header{padding-top:20px;padding-bottom:20px;text-align:center;background-color:#f4f4f4}.header-text{font-size:15px;font-weight:600;display:inline-block;vertical-align:middle;letter-spacing:.05em;text-transform:uppercase}.header-text-h{visibility:hidden}.footer{font-size:14px;line-height:1.5;padding-top:30px;padding-bottom:30px;text-align:center;background-color:#f4f4f4}.footer a{color:#000}.footer a:hover{color:#2196f3}.footer-separator{display:none}@media only screen and (min-width:480px){.footer{font-size:15px;padding-top:40px;padding-bottom:40px}.footer br{display:none}.footer-separator{display:inline;margin-right:10px;margin-left:10px;color:#999}}.example{width:100%;height:auto;margin-bottom:30px;display:block;}.highlight .c{color:#93a1a1}.highlight .err,.highlight .g{color:#586e75}.highlight .k{color:#859900}.highlight .l,.highlight .n{color:#586e75}.highlight .o{color:#859900}.highlight .x{color:#cb4b16}.highlight .p{color:#586e75}.highlight .cm{color:#93a1a1}.highlight .cp{color:#859900}.highlight .c1{color:#93a1a1}.highlight .cs{color:#859900}.highlight .gd{color:#2aa198}.highlight .ge{font-style:italic;color:#586e75}.highlight .gr{color:#dc322f}.highlight .gh{color:#cb4b16}.highlight .gi{color:#859900}.highlight .go,.highlight .gp{color:#586e75}.highlight .gs{font-weight:700;color:#586e75}.highlight .gu{color:#cb4b16}.highlight .gt{color:#586e75}.highlight .kc{color:#cb4b16}.highlight .kd{color:#268bd2}.highlight .kn,.highlight .kp{color:#859900}.highlight .kr{color:#268bd2}.highlight .kt{color:#dc322f}.highlight .ld{color:#586e75}.highlight .m,.highlight .s{color:#2aa198}.highlight .na{color:#586e75}.highlight .nb{color:#b58900}.highlight .nc{color:#268bd2}.highlight .no{color:#cb4b16}.highlight .nd{color:#268bd2}.highlight .ne,.highlight .ni{color:#cb4b16}.highlight .nf{color:#268bd2}.highlight .nl,.highlight .nn,.highlight .nx,.highlight .py{color:#586e75}.highlight .nt,.highlight .nv{color:#268bd2}.highlight .ow{color:#859900}.highlight .w{color:#586e75}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#2aa198}.highlight .sb{color:#93a1a1}.highlight .sc{color:#2aa198}.highlight .sd{color:#586e75}.highlight .s2{color:#2aa198}.highlight .se{color:#cb4b16}.highlight .sh{color:#586e75}.highlight .si,.highlight .sx{color:#2aa198}.highlight .sr{color:#dc322f}.highlight .s1,.highlight .ss{color:#2aa198}.highlight .bp,.highlight .vc,.highlight .vg,.highlight .vi{color:#268bd2}.highlight .il{color:#2aa198}
 
-  <!-- <link rel="canonical" href="https://jonsuh.com/hamburgers/"> -->
-  <link rel="amphtml" href="https://jonsuh.com/hamburgers/amp.html">
+  /*!
+   * Hamburgers
+   * @description Tasty CSS-animated hamburgers
+   * @author Jonathan Suh @jonsuh
+   * @site https://jonsuh.com/hamburgers
+   * @link https://github.com/jonsuh/hamburgers
+   */.hamburger{font:inherit;display:inline-block;overflow:visible;margin:0;padding:15px;cursor:pointer;transition-timing-function:linear;transition-duration:.15s;transition-property:opacity,-webkit-filter;transition-property:opacity,filter;transition-property:opacity,filter,-webkit-filter;text-transform:none;color:inherit;border:0;background-color:transparent}.hamburger:hover{opacity:.7}.hamburger-box{position:relative;display:inline-block;width:40px;height:24px}.hamburger-inner{top:50%;display:block;margin-top:-2px}.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before{position:absolute;width:40px;height:4px;transition-timing-function:ease;transition-duration:.15s;transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;border-radius:4px;background-color:#000}.hamburger-inner:after,.hamburger-inner:before{display:block;content:''}.hamburger-inner:before{top:-10px}.hamburger-inner:after{bottom:-10px}.hamburger--3dx .hamburger-box{-webkit-perspective:80px;perspective:80px}.hamburger--header{margin-right:-5px;padding-right:0;padding-left:5px;cursor:default;vertical-align:middle}.hamburger--header .hamburger-inner,.hamburger--header .hamburger-inner:after,.hamburger--header .hamburger-inner:before{background-color:#222}.hamburger--header.hamburger--elastic .hamburger-inner,.hamburger--header.hamburger--slider .hamburger-inner{top:2px}.hamburger--header:hover{opacity:1}.hamburger-wrap{text-align:center}.hamburger--accessible{display:inline-block}.hamburger--accessible .hamburger-box{display:inline-block;vertical-align:middle}.hamburger--accessible .hamburger-inner,.hamburger--accessible .hamburger-inner:after,.hamburger--accessible .hamburger-inner:before{background-color:#222}.hamburger-label{font-weight:600;display:inline-block;margin-left:5px;vertical-align:middle;text-transform:uppercase}.hamburger-label-hidden{display:none}.hamburger--example{outline:1px dashed cyan}.hamburger--example .hamburger-box{outline:1px dashed green}.hamburger--example .hamburger-inner,.hamburger--example .hamburger-inner:after,.hamburger--example .hamburger-inner:before{background-color:#222}.name{font-size:.8em;font-weight:600;position:absolute;top:0;left:0;width:100%;padding-top:1.25em;padding-top:2em;color:#fff}.information-directions{font-size:14px;width:100%}.browsers,.types{padding-left:0;list-style:none}.browsers li,.types li{margin-bottom:.25em}.browsers{padding-left:1em;-webkit-column-count:2;-moz-column-count:2;column-count:2}.hint{display:none;margin-bottom:1em}.hint.is-visible{display:block}@media only screen and (min-width:320px){.browsers{-webkit-column-count:2;-moz-column-count:2;column-count:2}}@media only screen and (min-width:480px){.types{-webkit-column-count:2;-moz-column-count:2;column-count:2}.browsers{-webkit-column-count:3;-moz-column-count:3;column-count:3}}@media only screen and (min-width:640px){.information-directions{font-size:15px}}
+ </style>
+
+  <link rel="canonical" href="https://jonsuh.com/hamburgers/">
   <meta name="robots" content="ALL">
   <meta name="author" content="Jonathan Suh">
   <link rel="author" href="https://jonsuh.com/">
@@ -34,6 +43,10 @@
 
   <meta name="theme-color" content="#2196f3">
   <meta name="msapplication-TileColor" content="#2196f3">
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
 <header class="header" role="banner">
@@ -50,127 +63,11 @@
 <main class="main" role="main">
   <section class="section section--information">
     <h1>Tasty CSS-animated hamburgers</h1>
-    <span class="information-directions">Click (or tap) each one to see it animate.</span>
-  </section>
-
-  <section class="table">
-    <div class="tray">
-      <div class="name">Slider</div>
-      <div class="hamburger hamburger--slider js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Squeeze</div>
-      <div class="hamburger hamburger--squeeze js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Arrow</div>
-      <div class="hamburger hamburger--arrow js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Arrow Alt</div>
-      <div class="hamburger hamburger--arrowalt js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Spin</div>
-      <div class="hamburger hamburger--spin js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Elastic</div>
-      <div class="hamburger hamburger--elastic js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Emphatic</div>
-      <div class="hamburger hamburger--emphatic js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Collapse</div>
-      <div class="hamburger hamburger--collapse js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Vortex</div>
-      <div class="hamburger hamburger--vortex js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Stand</div>
-      <div class="hamburger hamburger--stand js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Spring</div>
-      <div class="hamburger hamburger--spring js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">3DX</div>
-      <div class="hamburger hamburger--3dx js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">3DY</div>
-      <div class="hamburger hamburger--3dy js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray">
-      <div class="name">Boring</div>
-      <div class="hamburger hamburger--boring js-hamburger">
-        <div class="hamburger-box">
-          <div class="hamburger-inner"></div>
-        </div>
-      </div>
-    </div>
-    <div class="tray tray--empty"></div>
   </section>
 
   <section class="section section--usage">
     <div class="content">
+      <amp-img src="http://i.imgur.com/t7cUjDu.gif" width="570" height="370" class="example" layout="responsive"></amp-img>
       <h2 id="usage">Usage</h2>
       <p>Using Hamburgers for your site is easy (well, that was my intention anyway).
       <ol>
@@ -276,11 +173,12 @@
 
       <h2 id="sass">Sass</h2>
       <p>I’ve also included <code>.scss</code> source files if you use Sass as your CSS precompiler. It’s customizable and modular.</p>
-      <video controls>
-        <source src="customize.mp4" type="video/mp4">
-        <source src="customize.ogg" type="video/ogg">
-        <source src="customize.webm" type="video/webm">
-      </video>
+      <amp-video width="570" height="428" src="customize.mp4" controls layout="responsive">
+        <div fallback>
+          <p>Your browser doesn’t support HTML5 video.</p>
+        </div>
+      </amp-video>
+      <br>
       <ol>
         <li>
           <p>Download and unzip the <a href="https://github.com/jonsuh/hamburgers">source code from Github</a>.</p>
@@ -410,7 +308,7 @@ bower install css-hamburgers
       <p>A label can help make it more obvious that it toggles a menu.</p>
 
       <div class="hamburger-wrap">
-        <button class="hamburger hamburger--collapse hamburger--accessible js-hamburger" type="button">
+        <button class="hamburger hamburger--header hamburger--accessible js-hamburger" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
@@ -432,7 +330,20 @@ bower install css-hamburgers
   Chef <a href="https://jonsuh.com">Jonathan Suh</a>, <a href="https://twitter.com/jonsuh">@jonsuh</a><br><span class="footer-separator">|</span><a href="https://github.com/jonsuh/hamburgers">Recipe on Github</a>
 </footer>
 
-<script src="js/hamburgers.js" async></script>
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-2018785-1', 'auto');ga('send', 'pageview');</script>
+<amp-analytics type="googleanalytics" id="googleanalytics">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-2018785-1"
+    },
+    "triggers": {
+      "defaultPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+</amp-analytics>
 </body>
 </html>
