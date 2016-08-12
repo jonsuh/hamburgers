@@ -46,6 +46,7 @@
     width: $hamburger-layer-width;
     height: $hamburger-layer-height;
     background-color: $hamburger-layer-color;
+    border-color: $hamburger-layer-color;
     border-radius: $hamburger-layer-border-radius;
     position: absolute;
     transition-property: transform;
