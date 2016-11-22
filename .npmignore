@@ -9,3 +9,6 @@ css
 favicon.ico
 hamburger.png
 index.html
+hamburgers.gemspec
+Gemfile
+lib/
