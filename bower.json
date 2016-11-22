@@ -35,6 +35,9 @@
     "*.webm",
     "favicon.ico",
     "hamburger.png",
-    "index.html"
+    "index.html",
+    "Gemfile",
+    "hamburgers.gemspec",
+    "lib"
   ]
 }

@@ -24,19 +24,6 @@
   "bugs": {
     "url": "https://github.com/jonsuh/hamburgers/issues"
   },
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "js",
-    "_js",
-    "css",
-    "*.mp4",
-    "*.ogv",
-    "*.webm",
-    "favicon.ico",
-    "hamburger.png",
-    "index.html"
-  ],
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.11.1",
