@@ -7,6 +7,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 ### Table of Contents
 
 - [Usage](#usage)
+- [Sass](#sass)
 - [Customization](#customization)
 - [Accessibility](#accessibility)
 - [Browser Support](#browser-support)
@@ -96,29 +97,68 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 
 ## Sass
 
-I’ve also included `.scss` source files if you use Sass as your CSS precompiler. It’s customizable and modular.
+Included are `.scss` source files if you use Sass as your CSS precompiler. It’s customizable and modular.
 
-1. [Download](https://github.com/jonsuh/hamburgers/archive/master.zip) and unzip the source files.
-2. Copy the files from the `_sass/hamburgers` directory into your project.
-3. Import the `hamburgers.scss` file in your Sass manifest file:
+1. Hamburgers is available on [npm](https://www.npmjs.com/package/hamburgers), yarn and [Bower](http://bower.io/search/?q=css-hamburgers).
+
+  ```
+  npm install hamburgers
+
+  yarn get hamburgers
+
+  bower install css-hamburgers
+  ```
+
+  Also available as a [Ruby gem](https://rubygems.org/gems/hamburgers) to use within your Rails application—see [below](#install-for-ruby-on-rails) for more information.
+
+  Or to manually install it, [download](https://github.com/jonsuh/hamburgers/archive/master.zip) and unzip the source files, then copy the files from the `_sass/hamburgers` directory into your project.
+
+2. Import the `hamburgers.scss` file in your Sass manifest file:
 
   ```scss
   @import "path/to/hamburgers";
   ```
 
-4. Customize your hamburger and/or remove any types you don’t want in `hamburgers.scss`.
-5. Compile your Sass*, and voila!
-
-Hamburgers is also available on [npm](https://www.npmjs.com/package/hamburgers) and [Bower](http://bower.io/search/?q=css-hamburgers).
-
-```
-npm install hamburgers
-bower install css-hamburgers
-```
+3. Customize your hamburger and/or remove any types you don’t want in `hamburgers.scss`.
+4. Compile your Sass*, and voila!
 
 \* Be sure to run the CSS through [Autoprefixer](https://github.com/postcss/autoprefixer) since the Sass doesn’t account for vendor prefixes.
 
-### Customization
+### Install for Ruby on Rails
+
+1. Add Hamburgers to your Gemfile.
+
+  ```
+  gem 'hamburgers'
+  ```
+
+2. Run `bundle install`.
+3. Include Hamburgers by using Sass’s native `@import`**:
+
+  ```scss
+  // application.scss
+  @import "hamburgers";
+  ```
+
+  \** [More information](https://blog.pivotal.io/pivotal-labs/labs/structure-your-sass-files-with-import) on why Sass’s native `@import` + why you should ditch Sprockets directives altogether.
+
+## Customization
+
+To override default settings, declare them before importing Hamburgers:
+
+```scss
+$hamburgers-padding-x: 20px;
+$hamburgers-padding-y: 15px;
+
+@import "hamburgers";
+```
+
+You can also create a separate file (e.g. `hamburgers-settings.scss`) with those declarations, then import it before Hamburgers:
+
+```scss
+@import "hamburgers-settings"
+@import "hamburgers";
+```
 
 Here is the full list of default settings (found in `_sass/hamburgers/hamburgers.scss`);
 
@@ -170,22 +210,6 @@ $hamburger-types: (
   vortex,
   vortex-r
 );
-```
-
-To override any default settings, you can change the value(s) within `hamburgers.scss`, but I recommend you declare your new settings separately. Settings must come before `@import`:
-
-```scss
-$hamburgers-padding-x: 20px;
-$hamburgers-padding-y: 15px;
-
-@import "path/to/hamburgers";
-```
-
-You can also create a separate file (e.g. `hamburgers-settings.scss`) with those declarations, then import it along with Hamburgers:
-
-```scss
-@import "hamburgers-settings"
-@import "path/to/hamburgers";
 ```
 
 #### `ems` or `rems`
