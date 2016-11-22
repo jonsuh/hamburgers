@@ -123,22 +123,22 @@ bower install css-hamburgers
 Here is the full list of default settings (found in `_sass/hamburgers/hamburgers.scss`);
 
 ```scss
-$hamburger-padding-x                       : 15px !default;
-$hamburger-padding-y                       : 15px !default;
-$hamburger-layer-width                     : 40px !default;
-$hamburger-layer-height                    : 4px !default;
-$hamburger-layer-spacing                   : 6px !default;
-$hamburger-layer-color                     : #000 !default;
-$hamburger-layer-border-radius             : 4px !default;
-$hamburger-hover-opacity                   : 0.7 !default;
-$hamburger-hover-transition-duration       : 0.15s !default;
-$hamburger-hover-transition-timing-function: linear !default;
+$hamburger-padding-x                       : 15px;
+$hamburger-padding-y                       : 15px;
+$hamburger-layer-width                     : 40px;
+$hamburger-layer-height                    : 4px;
+$hamburger-layer-spacing                   : 6px;
+$hamburger-layer-color                     : #000;
+$hamburger-layer-border-radius             : 4px;
+$hamburger-hover-opacity                   : 0.7;
+$hamburger-hover-transition-duration       : 0.15s;
+$hamburger-hover-transition-timing-function: linear;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
 // change the value of $hamburger-hover-filter accordingly.
-$hamburger-hover-use-filter: false !default;
-$hamburger-hover-filter    : opacity(50%) !default;
+$hamburger-hover-use-filter: false;
+$hamburger-hover-filter    : opacity(50%);
 
 // Remove or comment out the hamburger types you don’t want
 // or need, so they get excluded from the compiled CSS.
@@ -169,7 +169,7 @@ $hamburger-types: (
   squeeze,
   vortex,
   vortex-r
-) !default;
+);
 ```
 
 To override any default settings, you can change the value(s) within `hamburgers.scss`, but I recommend you declare your new settings separately. Settings must come before `@import`:
