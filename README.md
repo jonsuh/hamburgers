@@ -97,7 +97,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 
 ## Sass
 
-Included are `.scss` source files if you use Sass as your CSS precompiler. It’s customizable and modular.
+`.scss` source files are available if you use Sass as your CSS precompiler. It’s customizable and modular.
 
 1. Hamburgers is available on [npm](https://www.npmjs.com/package/hamburgers), yarn and [Bower](http://bower.io/search/?q=css-hamburgers).
 
@@ -149,6 +149,7 @@ To override default settings, declare them before importing Hamburgers:
 ```scss
 $hamburgers-padding-x: 20px;
 $hamburgers-padding-y: 15px;
+$hamburger-types     : (collapse);
 
 @import "hamburgers";
 ```
