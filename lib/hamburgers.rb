@@ -1,3 +1,5 @@
+# Derived from https://github.com/thoughtbot/bourbon/blob/v4-stable/lib/bourbon.rb
+# Special thanks to the thoughtbot team b/c I had no clue what I was doing
 dir = File.dirname(__FILE__)
 $LOAD_PATH.unshift dir unless $LOAD_PATH.include?(dir)
 
