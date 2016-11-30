@@ -8,7 +8,11 @@
     "email": "hello@jonsuh.com",
     "url": "https://jonsuh.com/hamburgers"
   },
-  "main": "_sass/hamburgers/hamburgers.scss",
+  "main": "index.js",
+  "eyeglass": {
+    "needs": "*",
+    "exports": "eyeglass-exports.js"
+  },
   "keywords": [
     "css",
     "hamburger",
