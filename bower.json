@@ -2,6 +2,7 @@
   "name": "css-hamburgers",
   "version": "0.6.0",
   "description": "Collection of tasty CSS-animated hamburger icons. Includes Sass files (modular and customizable), so cook up your own hamburger.",
+  "homepage": "https://jonsuh.com/hamburgers",
   "license": "MIT",
   "author": {
     "name": "Jonathan Suh",
