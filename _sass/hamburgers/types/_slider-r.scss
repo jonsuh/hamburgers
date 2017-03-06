@@ -10,7 +10,7 @@
         top: $hamburger-layer-height + $hamburger-layer-spacing;
         transition-property: transform, opacity;
         transition-timing-function: ease;
-        transition-duration: 0.2s;
+        transition-duration: 0.15s;
       }
 
       &::after {
