@@ -2,7 +2,7 @@
 
 Changelog for Hamburgers.
 
-## [0.8.0] - 3/16/2017
+## [0.8.1] - 3/16/2017
 ### Updated
 - Faster animations.
 - Improved accessibility documentation thanks to @scottaohara [#baf5b5e](https://github.com/jonsuh/hamburgers/pull/34/commits/baf5b5ea3cf9bba155c8e74dc5b95e48e3384c4d).
