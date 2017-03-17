@@ -228,32 +228,43 @@ Hamburger menu icons can be useful in the right context, but they’re not the m
 ARIA will help make it accessible to people with disabilities.
 
 ```html
-<button class="hamburger hamburger--elastic" type="button"
-        aria-label="Menu" aria-controls="navigation">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
-<nav id="navigation">
-  <!--navigation goes here-->
+<nav>
+  <button class="hamburger hamburger--elastic" type="button"
+          aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <div id="navigation">
+    <!--navigation goes here-->
+  </div>
 </nav>
 ```
 
-If you insist on using `<div>`s, by default they’re not focusable (i.e. via keyboard or assistive technology). Add the `tabindex` attribute alongside ARIA.
+You will need JavaScript to toggle between `aria-expanded` attribute being set to `true` and `false`, as this will indicate to visually impaired users whether the menu is opened or closed.
+
+The hamburger button belongs __inside__ the `<nav>` so that assistive technologies will be able to locate the navigation, and to allow these users to easily locatate the hamburger button, without having to search up and down the DOM, once they realize they've found themselves in an empty navigation.
+
+If you insist on using `<div>`s, by default they’re not focusable (i.e. via keyboard or assistive technology). Add the `tabindex` attribute alongside ARIA. You will also need to recreate expected keyboard functionality for these `<div>`s. Using JavaScript, you will need to make sure that both <kbd>Space</kbd> and <kbd>Enter</kbd> will toggle the hamburger states.
 
 ```html
-<div class="hamburger hamburger--elastic" tabindex="0"
-     aria-label="Menu" role="button" aria-controls="navigation">
-  <div class="hamburger-box">
-    <div class="hamburger-inner"></div>
-  </div>
-</div>
 <nav id="navigation">
-  <!--navigation goes here-->
+
+  <div class="hamburger hamburger--elastic" tabindex="0"
+       aria-label="Menu" role="button" aria-controls="navigation" aria-expanded="true/false">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+
+  <div id="navigation">
+    <!--navigation goes here-->
+  </div>
 </nav>
 ```
 
-A label can help make it more obvious that it toggles a menu.
+A label will help make it more obvious that it toggles a menu.
 
 ```html
 <button class="hamburger hamburger--collapse" type="button">
