@@ -277,6 +277,27 @@ A label will help make it more obvious that it toggles a menu.
 
 Here are [some](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) [resources](https://webaccessibility.withgoogle.com/course) on [web](http://a11yproject.com/) [accessibility](http://www.html5accessibility.com/) and [ARIA](https://w3c.github.io/aria-in-html/).
 
+## Angularjs 1 implementation
+
+```html
+ <button class="hamburger hamburger--collapse" type="button" 
+         ng-click="vm.toggleSidebar('left')" 
+         ng-class="{'': !vm.isActive, 'is-active': vm.isActive}" 
+         ng-init="vm.isActive = false">
+      <span class="hamburger-box">
+         <span class="hamburger-inner"></span>
+     </span>
+</button>
+```
+And then toggle its truthiness in the controller
+
+```javascript
+toggleSidebar(menuName: string): void {
+    this.$mdSidenav(menuName).toggle();
+    this.isActive = !this.isActive
+}
+```
+
 ## Browser Support
 
 Animations use CSS3 3D transforms (`translate3d` whenever possible for GPU acceleration), which is supported by most browsers (not supported by IE9 and older and Opera Mini). For detailed browser support, check [caniuse.com](http://caniuse.com/#search=translate3d).
