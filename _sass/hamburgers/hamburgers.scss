@@ -46,12 +46,12 @@ $hamburger-types: (
   emphatic-r,
   slider,
   slider-r,
+  spin,
+  spin-r,
   spring,
   spring-r,
   stand,
   stand-r,
-  spin,
-  spin-r,
   squeeze,
   vortex,
   vortex-r
@@ -80,12 +80,12 @@ $hamburger-types: (
 @import "types/emphatic-r";
 @import "types/slider";
 @import "types/slider-r";
+@import "types/spin";
+@import "types/spin-r";
 @import "types/spring";
 @import "types/spring-r";
 @import "types/stand";
 @import "types/stand-r";
-@import "types/spin";
-@import "types/spin-r";
 @import "types/squeeze";
 @import "types/vortex";
 @import "types/vortex-r";
