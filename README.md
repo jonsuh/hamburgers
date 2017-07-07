@@ -57,10 +57,14 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   hamburger--3dx-r
   hamburger--3dy
   hamburger--3dy-r
+  hamburger--3dxy
+  hamburger--3dxy-r
   hamburger--arrow
   hamburger--arrow-r
   hamburger--arrowalt
   hamburger--arrowalt-r
+  hamburger--arrowturn
+  hamburger--arrowturn-r
   hamburger--boring
   hamburger--collapse
   hamburger--collapse-r
@@ -68,6 +72,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   hamburger--elastic-r
   hamburger--emphatic
   hamburger--emphatic-r
+  hamburger--minus
   hamburger--slider
   hamburger--slider-r
   hamburger--spin
@@ -188,10 +193,14 @@ $hamburger-types: (
   3dx-r,
   3dy,
   3dy-r,
+  3dxy,
+  3dxy-r,
   arrow,
   arrow-r,
   arrowalt,
   arrowalt-r,
+  arrowturn,
+  arrowturn-r,
   boring,
   collapse,
   collapse-r,
@@ -199,6 +208,7 @@ $hamburger-types: (
   elastic-r,
   emphatic,
   emphatic-r,
+  minus,
   slider,
   slider-r,
   spring,
