@@ -33,6 +33,8 @@ $hamburger-types: (
   3dx-r,
   3dy,
   3dy-r,
+  3dxy,
+  3dxy-r,
   arrow,
   arrow-r,
   arrowalt,
@@ -44,14 +46,15 @@ $hamburger-types: (
   elastic-r,
   emphatic,
   emphatic-r,
+  minus,
   slider,
   slider-r,
+  spin,
+  spin-r,
   spring,
   spring-r,
   stand,
   stand-r,
-  spin,
-  spin-r,
   squeeze,
   vortex,
   vortex-r
@@ -67,10 +70,14 @@ $hamburger-types: (
 @import "types/3dx-r";
 @import "types/3dy";
 @import "types/3dy-r";
+@import "types/3dxy";
+@import "types/3dxy-r";
 @import "types/arrow";
 @import "types/arrow-r";
 @import "types/arrowalt";
 @import "types/arrowalt-r";
+@import "types/arrowturn";
+@import "types/arrowturn-r";
 @import "types/boring";
 @import "types/collapse";
 @import "types/collapse-r";
@@ -78,14 +85,15 @@ $hamburger-types: (
 @import "types/elastic-r";
 @import "types/emphatic";
 @import "types/emphatic-r";
+@import "types/minus";
 @import "types/slider";
 @import "types/slider-r";
+@import "types/spin";
+@import "types/spin-r";
 @import "types/spring";
 @import "types/spring-r";
 @import "types/stand";
 @import "types/stand-r";
-@import "types/spin";
-@import "types/spin-r";
 @import "types/squeeze";
 @import "types/vortex";
 @import "types/vortex-r";
