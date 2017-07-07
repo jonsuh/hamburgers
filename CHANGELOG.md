@@ -2,7 +2,7 @@
 
 Changelog for Hamburgers.
 
-## [0.9.0] - 7/6/2017
+## [0.9.1] - 7/6/2017
 ### Added
 - Add new types: `3dxy`, `3dxy-r`, `arrowturn`, `arrowturn-r`, `minus`
 
