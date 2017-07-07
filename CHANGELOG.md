@@ -2,6 +2,14 @@
 
 Changelog for Hamburgers.
 
+## [0.9.0] - 7/6/2017
+### Added
+- Add new types: `3dxy`, `3dxy-r`, `arrowturn`, `arrowturn-r`, `minus`
+
+### Updated
+- Include missing and new types in `dist/example.html`.
+- Update dependencies and include `package-lock.json`.
+
 ## [0.8.1] - 3/16/2017
 ### Updated
 - Faster animations.
