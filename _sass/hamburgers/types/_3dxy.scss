@@ -1,8 +1,8 @@
-@if index($hamburger-types, 3dx-r) {
+@if index($hamburger-types, 3dxy) {
   /*
-   * 3DX Reverse
+   * 3DXY
    */
-  .hamburger--3dx-r {
+  .hamburger--3dxy {
     .hamburger-box {
       perspective: $hamburger-layer-width * 2;
     }
@@ -20,7 +20,7 @@
     &.is-active {
       .hamburger-inner {
         background-color: transparent;
-        transform: rotateY(-180deg);
+        transform: rotateX(180deg) rotateY(180deg);
 
         &::before {
           transform: translate3d(0, $hamburger-layer-height + $hamburger-layer-spacing, 0) rotate(45deg);

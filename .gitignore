@@ -1,5 +1,7 @@
+*gem
 .DS_Store
 bower_components
 node_modules
 js
 css
+yarn.lock

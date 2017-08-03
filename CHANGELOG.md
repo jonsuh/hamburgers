@@ -2,6 +2,27 @@
 
 Changelog for Hamburgers.
 
+## [0.9.1] - 7/6/2017
+### Added
+- Add new types: `3dxy`, `3dxy-r`, `arrowturn`, `arrowturn-r`, `minus`
+
+### Updated
+- Include missing and new types in `dist/example.html`.
+- Update dependencies and include `package-lock.json`.
+
+## [0.8.1] - 3/16/2017
+### Updated
+- Faster animations.
+- Improved accessibility documentation thanks to @scottaohara [#baf5b5e](https://github.com/jonsuh/hamburgers/pull/34/commits/baf5b5ea3cf9bba155c8e74dc5b95e48e3384c4d).
+
+## [0.7.0] - 11/29/2016
+### Added
+- [Eyeglass](http://eyeglass.rocks/) support.
+
+## [0.6.0] - 11/22/2016
+### Fixed
+- Fix `spin-r`’s `.is-active::after` rotation. See https://github.com/jonsuh/hamburgers/issues/28.
+
 ## [0.5.0] - 04/04/2016
 ### Fixed
 - `Error: Import directives may not be used within control directives or mixins.` in certain cases like when compiling with Ruby Sass.  
