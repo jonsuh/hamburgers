@@ -67,3 +67,20 @@
     bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
 }
+
+.hamburger-label {
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.hamburger--with-label {
+  display: inline-block;
+
+  .hamburger-box {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
