@@ -41,6 +41,14 @@ $hamburger-types: (
   arrowalt-r,
   arrowturn,
   arrowturn-r,
+  arrowturn-up-90-left,
+  arrowturn-up-90-right,
+  arrowturn-up-270-left,
+  arrowturn-up-270-right,
+  arrowturn-down-90-left,
+  arrowturn-down-90-right,
+  arrowturn-down-270-left,
+  arrowturn-down-270-right,
   boring,
   collapse,
   collapse-r,
@@ -80,6 +88,14 @@ $hamburger-types: (
 @import "types/arrowalt-r";
 @import "types/arrowturn";
 @import "types/arrowturn-r";
+@import "types/arrowturn-up-90-left";
+@import "types/arrowturn-up-90-right";
+@import "types/arrowturn-up-270-left";
+@import "types/arrowturn-up-270-right";
+@import "types/arrowturn-down-90-left";
+@import "types/arrowturn-down-90-right";
+@import "types/arrowturn-down-270-left";
+@import "types/arrowturn-down-270-right";
 @import "types/boring";
 @import "types/collapse";
 @import "types/collapse-r";

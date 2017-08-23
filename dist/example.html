@@ -16,6 +16,62 @@
   </style>
 </head>
 <body>
+  <strong>Example using input checkbox (without JavaScript!!)</strong>
+  <br>
+  <example>
+    <!--
+    have to isolate the example in it's own container,
+    otherwise it can interfere with other elements on this page
+    since the css is using 'elements after' feature using '~'
+    -->
+    <input id="burger1" type="checkbox" style="display:none"/>
+    <label for="burger1" class="hamburger hamburger--arrowturn-up-90-right">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </label>
+    <code>Using input checkbox</code>
+  </example>
+  <br>
+  <example>
+    <!--
+    have to isolate the example in it's own container,
+    otherwise it can interfere with other elements on this page
+    since the css is using 'elements after' feature using '~'
+    -->
+    <input id="burger2" type="checkbox" style="display:none"/>
+    <label for="burger2" class="hamburger hamburger--with-label hamburger--arrowturn-up-270-right">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+      <span class="hamburger-label">Menu</span>
+    </label>
+    <code>Using input checkbox and label</code>
+  </example>
+  <br>
+
+  <p><strong>Examples below need JavaScript!</strong></p>
+
+  <button class="hamburger hamburger--arrowturn-up-90-right" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <code>Using button</code>
+
+  <br>
+
+  <button class="hamburger hamburger--with-label hamburger--arrowturn-up-270-right" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="hamburger-label">Menu</span>
+  </button>
+  <code>Using button with a label</code>
+
+  <br>
+
+  All examples below use a 'div' element:<br>
   <div class="hamburger hamburger--3dx">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
@@ -121,6 +177,78 @@
     </div>
   </div>
   <code>hamburger--arrowturn-r</code>
+
+  <br>
+
+  <div class="hamburger hamburger--arrowturn-up-90-right">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <code>hamburger--arrowturn-up-90-right</code>
+
+  <br>
+
+  <div class="hamburger hamburger--arrowturn-up-90-left">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <code>hamburger--arrowturn-up-90-left</code>
+
+  <br>
+
+  <div class="hamburger hamburger--arrowturn-up-270-left">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <code>hamburger--arrowturn-up-270-left</code>
+
+  <br>
+
+  <div class="hamburger hamburger--arrowturn-up-270-right">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <code>hamburger--arrowturn-up-270-right</code>
+
+  <br>
+
+  <div class="hamburger hamburger--arrowturn-down-90-left">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <code>hamburger--arrowturn-down-90-left</code>
+
+  <br>
+
+  <div class="hamburger hamburger--arrowturn-down-90-right">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <code>hamburger--arrowturn-down-90-right</code>
+
+  <br>
+
+  <div class="hamburger hamburger--arrowturn-down-270-right">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <code>hamburger--arrowturn-down-270-right</code>
+
+  <br>
+
+  <div class="hamburger hamburger--arrowturn-down-270-left">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </div>
+  <code>hamburger--arrowturn-down-270-left</code>
 
   <br>
 
@@ -307,7 +435,7 @@
    */
     var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
 
-    var hamburgers = document.querySelectorAll(".hamburger");
+    var hamburgers = document.querySelectorAll("div.hamburger, button.hamburger"); /* not including the 'label' */
     if (hamburgers.length > 0) {
       forEach(hamburgers, function(hamburger) {
         hamburger.addEventListener("click", function() {
