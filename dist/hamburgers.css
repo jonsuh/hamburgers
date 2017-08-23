@@ -49,6 +49,19 @@
   .hamburger-inner::after {
     bottom: -10px; }
 
+.hamburger-label {
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  text-transform: uppercase; }
+
+.hamburger--with-label {
+  display: inline-block; }
+  .hamburger--with-label .hamburger-box {
+    display: inline-block;
+    vertical-align: middle; }
+
 /*
    * 3DX
    */
@@ -237,6 +250,86 @@
   .hamburger--arrowturn-r.is-active .hamburger-inner::before {
     transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
   .hamburger--arrowturn-r.is-active .hamburger-inner::after {
+    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+/*
+ * Arrow Turn Up quick (reverse)
+ */
+.hamburger--arrowturn-up-90-left.is-active .hamburger-inner, input:checked ~ .hamburger--arrowturn-up-90-left .hamburger-inner {
+  transform: rotate(-90deg); }
+  .hamburger--arrowturn-up-90-left.is-active .hamburger-inner::before, input:checked ~ .hamburger--arrowturn-up-90-left .hamburger-inner::before {
+    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-up-90-left.is-active .hamburger-inner::after, input:checked ~ .hamburger--arrowturn-up-90-left .hamburger-inner::after {
+    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+
+/*
+ * Arrow Turn Up quick
+ */
+.hamburger--arrowturn-up-90-right.is-active .hamburger-inner, input:checked ~ .hamburger--arrowturn-up-90-right .hamburger-inner {
+  transform: rotate(90deg); }
+  .hamburger--arrowturn-up-90-right.is-active .hamburger-inner::before, input:checked ~ .hamburger--arrowturn-up-90-right .hamburger-inner::before {
+    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-up-90-right.is-active .hamburger-inner::after, input:checked ~ .hamburger--arrowturn-up-90-right .hamburger-inner::after {
+    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+/*
+ * Arrow Turn Up long
+ */
+.hamburger--arrowturn-up-270-left.is-active .hamburger-inner, input:checked ~ .hamburger--arrowturn-up-270-left .hamburger-inner {
+  transform: rotate(-270deg); }
+  .hamburger--arrowturn-up-270-left.is-active .hamburger-inner::before, input:checked ~ .hamburger--arrowturn-up-270-left .hamburger-inner::before {
+    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-up-270-left.is-active .hamburger-inner::after, input:checked ~ .hamburger--arrowturn-up-270-left .hamburger-inner::after {
+    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+/*
+ * Arrow Turn Up long (reverse)
+ */
+.hamburger--arrowturn-up-270-right.is-active .hamburger-inner, input:checked ~ .hamburger--arrowturn-up-270-right .hamburger-inner {
+  transform: rotate(270deg); }
+  .hamburger--arrowturn-up-270-right.is-active .hamburger-inner::before, input:checked ~ .hamburger--arrowturn-up-270-right .hamburger-inner::before {
+    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-up-270-right.is-active .hamburger-inner::after, input:checked ~ .hamburger--arrowturn-up-270-right .hamburger-inner::after {
+    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+
+/*
+ * Arrow Turn Down quick
+ */
+.hamburger--arrowturn-down-90-left.is-active .hamburger-inner {
+  transform: rotate(-90deg); }
+  .hamburger--arrowturn-down-90-left.is-active .hamburger-inner::before {
+    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-down-90-left.is-active .hamburger-inner::after {
+    transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+/*
+ * Arrow Turn Down quick (reverse)
+ */
+.hamburger--arrowturn-down-90-right.is-active .hamburger-inner {
+  transform: rotate(90deg); }
+  .hamburger--arrowturn-down-90-right.is-active .hamburger-inner::before {
+    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-down-90-right.is-active .hamburger-inner::after {
+    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+
+/*
+ * Arrow Turn Down long (reverse)
+ */
+.hamburger--arrowturn-down-270-left.is-active .hamburger-inner {
+  transform: rotate(-270deg); }
+  .hamburger--arrowturn-down-270-left.is-active .hamburger-inner::before {
+    transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-down-270-left.is-active .hamburger-inner::after {
+    transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+
+/*
+ * Arrow Turn Down long
+ */
+.hamburger--arrowturn-down-270-right.is-active .hamburger-inner {
+  transform: rotate(270deg); }
+  .hamburger--arrowturn-down-270-right.is-active .hamburger-inner::before {
+    transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+  .hamburger--arrowturn-down-270-right.is-active .hamburger-inner::after {
     transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
 
 /*
