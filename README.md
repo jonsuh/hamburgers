@@ -256,6 +256,14 @@ $hamburger-types: (
   arrowalt-r,
   arrowturn,
   arrowturn-r,
+  arrowturn-up-90-left,
+  arrowturn-up-90-right,
+  arrowturn-up-270-left,
+  arrowturn-up-270-right,
+  arrowturn-down-90-left,
+  arrowturn-down-90-right,
+  arrowturn-down-270-left,
+  arrowturn-down-270-right,  
   boring,
   collapse,
   collapse-r,
@@ -331,7 +339,7 @@ If you insist on using `<div>`s, by default they’re not focusable (i.e. via ke
 
 ### Label
 
-A label will help make it more obvious that it toggles a menu.
+A label will help make it more obvious that it toggles a menu. It works with the 'button', 'div' and 'input checkbox'.
 
 ```html
 <button class="hamburger hamburger--collapse hamburger--with-label" type="button">
