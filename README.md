@@ -7,13 +7,13 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 ### Table of Contents
 
 - [Usage](#usage)
- - [Pure CSS](#pure-css)
- - [With JavScript](#with-a-bit-of-javascript)
+  - [Pure CSS](#pure-css)
+  - [With JavaScript](#with-a-bit-of-javascript)
 - [Hamburger types](#hamburger-types)
 - [Sass](#sass)
 - [Customization](#customization)
 - [Accessibility](#accessibility)
- - [Label](#label)
+  - [Label](#label)
 - [Browser Support](#browser-support)
 
 ## Usage
