@@ -1,7 +1,7 @@
 /*
  * Arrow Turn Down quick (reverse)
  */
-.hamburger--arrowturn-down-90-right.is-active {
+.hamburger--arrowturn-down-90-right.is-active, input:checked ~ .hamburger--arrowturn-down-90-right {
   .hamburger-inner {
     transform: rotate(90deg);
 

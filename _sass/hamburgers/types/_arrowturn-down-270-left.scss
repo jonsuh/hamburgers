@@ -1,7 +1,7 @@
 /*
  * Arrow Turn Down long (reverse)
  */
-.hamburger--arrowturn-down-270-left.is-active {
+.hamburger--arrowturn-down-270-left.is-active, input:checked ~ .hamburger--arrowturn-down-270-left {
   .hamburger-inner {
     transform: rotate(-270deg);
 

@@ -2,7 +2,7 @@
   /*
    * Arrow Right
    */
-  .hamburger--arrow-r.is-active {
+  .hamburger--arrow-r.is-active, input:checked ~ .hamburger--arrow-r {
     .hamburger-inner {
       &::before {
         transform: translate3d($hamburger-layer-width * 0.2, 0, 0) rotate(45deg) scale(0.7, 1);

@@ -24,7 +24,7 @@
       }
     }
 
-    &.is-active {
+    &.is-active, input:checked ~ & {
       .hamburger-inner {
         transition-delay: 0s;
         transition-timing-function: ease-out;

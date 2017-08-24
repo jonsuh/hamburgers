@@ -1,7 +1,7 @@
 /*
  * Arrow Turn
  */
-.hamburger--arrowturn.is-active {
+.hamburger--arrowturn.is-active, input:checked ~ .hamburger--arrowturn {
   .hamburger-inner {
     transform: rotate(-180deg);
 

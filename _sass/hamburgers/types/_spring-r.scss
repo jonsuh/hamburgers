@@ -22,7 +22,7 @@
       }
     }
 
-    &.is-active {
+    &.is-active, input:checked ~ & {
       .hamburger-inner {
         transform: translate3d(0, ($hamburger-layer-spacing + $hamburger-layer-height) * -1, 0) rotate(-45deg);
         transition-delay: 0.22s;

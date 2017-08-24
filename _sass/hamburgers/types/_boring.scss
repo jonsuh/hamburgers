@@ -11,7 +11,7 @@
       }
     }
 
-    &.is-active {
+    &.is-active, input:checked ~ & {
       .hamburger-inner {
         transform: rotate(45deg);
 
