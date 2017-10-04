@@ -109,7 +109,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   ```
   npm install hamburgers
 
-  yarn get hamburgers
+  yarn add hamburgers
 
   bower install css-hamburgers
   ```
