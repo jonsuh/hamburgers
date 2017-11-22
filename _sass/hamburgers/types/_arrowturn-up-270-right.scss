@@ -1,9 +1,9 @@
 /*
- * Arrow Turn
+ * Arrow Turn Up long (reverse)
  */
-.hamburger--arrowturn.is-active, input:checked ~ .hamburger--arrowturn {
+.hamburger--arrowturn-up-270-right.is-active, input:checked ~ .hamburger--arrowturn-up-270-right {
   .hamburger-inner {
-    transform: rotate(-180deg);
+    transform: rotate(270deg);
 
     &::before {
       transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);

@@ -15,7 +15,7 @@
       }
     }
 
-    &.is-active {
+    &.is-active, input:checked ~ & {
       .hamburger-inner {
         &::before {
           top: 0;

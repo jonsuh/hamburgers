@@ -1,9 +1,9 @@
 /*
- * Arrow Turn
+ * Arrow Turn Up quick (reverse)
  */
-.hamburger--arrowturn.is-active, input:checked ~ .hamburger--arrowturn {
+.hamburger--arrowturn-up-r.is-active, input:checked ~ .hamburger--arrowturn-up-r {
   .hamburger-inner {
-    transform: rotate(-180deg);
+    transform: rotate(-90deg);
 
     &::before {
       transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);

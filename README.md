@@ -7,12 +7,53 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 ### Table of Contents
 
 - [Usage](#usage)
+  - [Pure CSS](#pure-css)
+  - [With JavaScript](#with-a-bit-of-javascript)
+- [Hamburger types](#hamburger-types)
 - [Sass](#sass)
 - [Customization](#customization)
 - [Accessibility](#accessibility)
+  - [Label](#label)
 - [Browser Support](#browser-support)
 
 ## Usage
+
+### Pure CSS
+
+1. [Download](https://github.com/jonsuh/hamburgers/blob/master/dist/hamburgers.css) and include the CSS in the `<head>` of your site:
+
+  ```html
+  <link href="dist/hamburgers.css" rel="stylesheet">
+  ```
+
+2. Add the base hamburger markup:
+
+  ```html
+  <input id="burger" type="checkbox" style="display:none"/>
+  <label for="burger" class="hamburger">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </label>
+  ```
+
+  Note: the label's _for_ value must match the input checkbox _id_.  
+  If you're using multiple hamburgers on the same page, the _id_'s must be different.
+
+3. Append the class name of the type of hamburger you’re craving:
+
+  ```html
+  <input id="burger" type="checkbox" style="display:none"/>
+  <label for="burger" class="hamburger hamburger--3dx">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </label>
+  ```
+
+  See list of available [hamburger types](#hamburger-types).
+
+### With a bit of JavaScript
 
 1. [Download](https://github.com/jonsuh/hamburgers/blob/master/dist/hamburgers.css) and include the CSS in the `<head>` of your site:
 
@@ -50,43 +91,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   </button>
   ```
 
-  Here’s the list of hamburger-type classes you can choose from:
-
-  ```
-  hamburger--3dx
-  hamburger--3dx-r
-  hamburger--3dy
-  hamburger--3dy-r
-  hamburger--3dxy
-  hamburger--3dxy-r
-  hamburger--arrow
-  hamburger--arrow-r
-  hamburger--arrowalt
-  hamburger--arrowalt-r
-  hamburger--arrowturn
-  hamburger--arrowturn-r
-  hamburger--boring
-  hamburger--collapse
-  hamburger--collapse-r
-  hamburger--elastic
-  hamburger--elastic-r
-  hamburger--emphatic
-  hamburger--emphatic-r
-  hamburger--minus
-  hamburger--slider
-  hamburger--slider-r
-  hamburger--spin
-  hamburger--spin-r
-  hamburger--spring
-  hamburger--spring-r
-  hamburger--stand
-  hamburger--stand-r
-  hamburger--squeeze
-  hamburger--vortex
-  hamburger--vortex-r
-  ```
-
-  Note: `-r` classes are reverse variants (e.g. `hamburger--spin` spins clockwise whereas `hamburger--spin-r` spins counterclockwise.
+  See list of available [hamburger types](#hamburger-types).
 
 4. Trigger the active state by appending class name `is-active`:
 
@@ -99,6 +104,56 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   ```
 
   Since the class name would have to be toggled via JavaScript and implementation would differ based on the context of how you plan on using the hamburger, I’m going to leave the rest up to you.
+
+  See the source of the [example page in the 'dist' folder](dist/example.html) on how to add an event listener to toggle the 'is-active' class.
+
+## Hamburger types
+
+Here’s the list of hamburger-type classes you can choose from:
+
+```
+hamburger--3dx
+hamburger--3dx-r
+hamburger--3dy
+hamburger--3dy-r
+hamburger--3dxy
+hamburger--3dxy-r
+hamburger--arrow
+hamburger--arrow-r
+hamburger--arrowalt
+hamburger--arrowalt-r
+hamburger--arrowturn
+hamburger--arrowturn-r
+hamburger--arrowturn-up-90-left
+hamburger--arrowturn-up-90-right
+hamburger--arrowturn-up-270-left
+hamburger--arrowturn-up-270-right
+hamburger--arrowturn-down-90-left
+hamburger--arrowturn-down-90-right
+hamburger--arrowturn-down-270-left
+hamburger--arrowturn-down-270-right
+hamburger--boring
+hamburger--collapse
+hamburger--collapse-r
+hamburger--elastic
+hamburger--elastic-r
+hamburger--emphatic
+hamburger--emphatic-r
+hamburger--minus
+hamburger--slider
+hamburger--slider-r
+hamburger--spin
+hamburger--spin-r
+hamburger--spring
+hamburger--spring-r
+hamburger--stand
+hamburger--stand-r
+hamburger--squeeze
+hamburger--vortex
+hamburger--vortex-r
+```
+
+Note: `-r` classes are reverse variants (e.g. `hamburger--spin` spins clockwise whereas `hamburger--spin-r` spins counterclockwise.
 
 ## Sass
 
@@ -201,6 +256,14 @@ $hamburger-types: (
   arrowalt-r,
   arrowturn,
   arrowturn-r,
+  arrowturn-up-90-left,
+  arrowturn-up-90-right,
+  arrowturn-up-270-left,
+  arrowturn-up-270-right,
+  arrowturn-down-90-left,
+  arrowturn-down-90-right,
+  arrowturn-down-270-left,
+  arrowturn-down-270-right,  
   boring,
   collapse,
   collapse-r,
@@ -274,10 +337,12 @@ If you insist on using `<div>`s, by default they’re not focusable (i.e. via ke
 </nav>
 ```
 
-A label will help make it more obvious that it toggles a menu.
+### Label
+
+A label will help make it more obvious that it toggles a menu. It works with the 'button', 'div' and 'input checkbox'.
 
 ```html
-<button class="hamburger hamburger--collapse" type="button">
+<button class="hamburger hamburger--collapse hamburger--with-label" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>

@@ -19,7 +19,7 @@
       }
     }
 
-    &.is-active {
+    &.is-active, input:checked ~ & {
       .hamburger-inner {
         $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
 

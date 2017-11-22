@@ -23,7 +23,7 @@
       }
     }
 
-    &.is-active {
+    &.is-active, input:checked ~ & {
       .hamburger-inner {
         transform: rotate(-765deg);
         transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
