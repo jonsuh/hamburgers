@@ -2,6 +2,12 @@
 
 Changelog for Hamburgers.
 
+## [0.9.3] - 1/15/2018
+### Fixed
+- Missing `@if` statements in `arrowturn` and `arrowturn-r` variants [#51](https://github.com/jonsuh/hamburgers/pull/51).
+- Update docs with correct `yarn` install command [#45](https://github.com/jonsuh/hamburgers/pull/45).
+- Correct `eyeglass-module` tag in `package.json` [#48](https://github.com/jonsuh/hamburgers/pull/48).
+
 ## [0.9.1] - 7/6/2017
 ### Added
 - Add new types: `3dxy`, `3dxy-r`, `arrowturn`, `arrowturn-r`, `minus`
