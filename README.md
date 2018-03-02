@@ -152,8 +152,8 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 To override default settings, declare them before importing Hamburgers:
 
 ```scss
-$hamburgers-padding-x: 20px;
-$hamburgers-padding-y: 15px;
+$hamburger-padding-x: 20px;
+$hamburger-padding-y: 15px;
 $hamburger-types     : (collapse);
 
 @import "hamburgers";
