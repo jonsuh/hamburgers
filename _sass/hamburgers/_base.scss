@@ -6,8 +6,8 @@
   cursor: pointer;
 
   transition-property: opacity, filter;
-  transition-duration: $hamburger-hover-transition-duration;
-  transition-timing-function: $hamburger-hover-transition-timing-function;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
 
   // Normalize (<button>)
   font: inherit;

@@ -169,18 +169,16 @@ You can also create a separate file (e.g. `hamburgers-settings.scss`) with those
 Here is the full list of default settings (found in `_sass/hamburgers/hamburgers.scss`);
 
 ```scss
-$hamburger-padding-x                       : 15px;
-$hamburger-padding-y                       : 15px;
-$hamburger-layer-width                     : 40px;
-$hamburger-layer-height                    : 4px;
-$hamburger-layer-spacing                   : 6px;
-$hamburger-layer-color                     : #000;
-$hamburger-layer-border-radius             : 4px;
-$hamburger-hover-opacity                   : 0.7;
-$hamburger-hover-transition-duration       : 0.15s;
-$hamburger-hover-transition-timing-function: linear;
-$hamburger-active-layer-color              : $hamburger-layer-color;
-$hamburger-active-hover-opacity            : 1;
+$hamburger-padding-x           : 15px;
+$hamburger-padding-y           : 15px;
+$hamburger-layer-width         : 40px;
+$hamburger-layer-height        : 4px;
+$hamburger-layer-spacing       : 6px;
+$hamburger-layer-color         : #000;
+$hamburger-layer-border-radius : 4px;
+$hamburger-hover-opacity       : 0.7;
+$hamburger-active-layer-color  : $hamburger-layer-color;
+$hamburger-active-hover-opacity: 1;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
