@@ -2,6 +2,11 @@
 
 Changelog for Hamburgers.
 
+## [1.1.2] - 9/25/2018
+### Fixed
+- Change default value of `$hamburger-active-hover-opacity` to `$hamburger-hover-opacity`.
+- Change default value of `$hamburger-active-hover-filter` to `$hamburger-hover-filter`.
+
 ## [1.1.0] - 9/24/2018
 ### Added
 - Changing color of the hamburger in the active state thanks to @andreamaiolo [#20](https://github.com/jonsuh/hamburgers/pull/20)
