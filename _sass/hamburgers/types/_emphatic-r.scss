@@ -28,7 +28,7 @@
       .hamburger-inner {
         transition-delay: 0s;
         transition-timing-function: ease-out;
-        background-color: transparent;
+        background-color: transparent !important;
 
         &::before {
           left: $hamburger-layer-width * -2;

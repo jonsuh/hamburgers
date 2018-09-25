@@ -19,7 +19,7 @@
 
     &.is-active {
       .hamburger-inner {
-        background-color: transparent;
+        background-color: transparent !important;
         transform: rotateX(180deg);
 
         &::before {
