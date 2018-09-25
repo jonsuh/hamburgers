@@ -2,6 +2,13 @@
 
 Changelog for Hamburgers.
 
+## [1.1.0] - 9/24/2018
+### Added
+- Changing color of the hamburger in the active state thanks to @andreamaiolo [#20](https://github.com/jonsuh/hamburgers/pull/20)
+
+### Fixed
+- Removed `$hamburger-hover-transition-duration` and `$hamburger-hover-transition-timing-function`—types rely on custom timing, which render these useless.
+
 ## [0.9.3] - 1/15/2018
 ### Fixed
 - Missing `@if` statements in `arrowturn` and `arrowturn-r` variants [#51](https://github.com/jonsuh/hamburgers/pull/51).
