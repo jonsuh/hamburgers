@@ -2,6 +2,10 @@
 
 Changelog for Hamburgers.
 
+## [1.1.3] - 9/25/2018
+### Fixed
+- `!important` for types that rely on `background-color: transparent`.
+
 ## [1.1.2] - 9/25/2018
 ### Fixed
 - Change default value of `$hamburger-active-hover-opacity` to `$hamburger-hover-opacity`.
