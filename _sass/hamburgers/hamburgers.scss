@@ -18,14 +18,14 @@ $hamburger-layer-color         : #000 !default;
 $hamburger-layer-border-radius : 4px !default;
 $hamburger-hover-opacity       : 0.7 !default;
 $hamburger-active-layer-color  : $hamburger-layer-color !default;
-$hamburger-active-hover-opacity: 1 !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
 // change the value of $hamburger-hover-filter accordingly.
 $hamburger-hover-use-filter   : false !default;
 $hamburger-hover-filter       : opacity(50%) !default;
-$hamburger-active-hover-filter: opacity(100%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 // Types (Remove or comment out what you don’t need)
 // ==================================================
