@@ -179,12 +179,15 @@ $hamburger-layer-border-radius             : 4px;
 $hamburger-hover-opacity                   : 0.7;
 $hamburger-hover-transition-duration       : 0.15s;
 $hamburger-hover-transition-timing-function: linear;
+$hamburger-active-layer-color              : #8c8c8c;
+$hamburger-active-hover-opacity            : 1;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
 // change the value of $hamburger-hover-filter accordingly.
-$hamburger-hover-use-filter: false;
-$hamburger-hover-filter    : opacity(50%);
+$hamburger-hover-use-filter   : false;
+$hamburger-hover-filter       : opacity(50%);
+$hamburger-active-hover-filter: opacity(100%);
 
 // Remove or comment out the hamburger types you don’t want
 // or need, so they get excluded from the compiled CSS.
