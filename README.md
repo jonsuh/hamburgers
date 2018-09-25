@@ -20,7 +20,22 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   <link href="dist/hamburgers.css" rel="stylesheet">
   ```
 
-2. Add the base hamburger markup:
+2. Call js funcion in your project
+
+  ```js
+  var forEach=function(t,o,r){if("[object Object]"===Object.prototype.toString.call(t))for(var c in t)Object.prototype.hasOwnProperty.call(t,c)&&o.call(r,t[c],c,t);else for(var e=0,l=t.length;l>e;e++)o.call(r,t[e],e,t)};
+
+  var hamburgers = document.querySelectorAll(".hamburger");
+  if (hamburgers.length > 0) {
+    forEach(hamburgers, function(hamburger) {
+      hamburger.addEventListener("click", function() {
+        this.classList.toggle("is-active");
+      }, false);
+    });
+  }
+  ```
+
+3. Add the base hamburger markup:
 
   ```html
   <button class="hamburger" type="button">
@@ -40,7 +55,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   </div>
   ```
 
-3. Append the class name of the type of hamburger you’re craving:
+4. Append the class name of the type of hamburger you’re craving:
 
   ```html
   <button class="hamburger hamburger--collapse" type="button">
@@ -88,7 +103,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 
   Note: `-r` classes are reverse variants (e.g. `hamburger--spin` spins clockwise whereas `hamburger--spin-r` spins counterclockwise.
 
-4. Trigger the active state by appending class name `is-active`:
+5. Trigger the active state by appending class name `is-active`:
 
   ```html
   <button class="hamburger hamburger--collapse is-active" type="button">
