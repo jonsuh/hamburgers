@@ -67,7 +67,7 @@
     transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .hamburger--3dx.is-active .hamburger-inner {
-  background-color: transparent;
+  background-color: transparent !important;
   transform: rotateY(180deg); }
   .hamburger--3dx.is-active .hamburger-inner::before {
     transform: translate3d(0, 10px, 0) rotate(45deg); }
@@ -86,7 +86,7 @@
     transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .hamburger--3dx-r.is-active .hamburger-inner {
-  background-color: transparent;
+  background-color: transparent !important;
   transform: rotateY(-180deg); }
   .hamburger--3dx-r.is-active .hamburger-inner::before {
     transform: translate3d(0, 10px, 0) rotate(45deg); }
@@ -105,7 +105,7 @@
     transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .hamburger--3dy.is-active .hamburger-inner {
-  background-color: transparent;
+  background-color: transparent !important;
   transform: rotateX(-180deg); }
   .hamburger--3dy.is-active .hamburger-inner::before {
     transform: translate3d(0, 10px, 0) rotate(45deg); }
@@ -124,7 +124,7 @@
     transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .hamburger--3dy-r.is-active .hamburger-inner {
-  background-color: transparent;
+  background-color: transparent !important;
   transform: rotateX(180deg); }
   .hamburger--3dy-r.is-active .hamburger-inner::before {
     transform: translate3d(0, 10px, 0) rotate(45deg); }
@@ -143,7 +143,7 @@
     transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .hamburger--3dxy.is-active .hamburger-inner {
-  background-color: transparent;
+  background-color: transparent !important;
   transform: rotateX(180deg) rotateY(180deg); }
   .hamburger--3dxy.is-active .hamburger-inner::before {
     transform: translate3d(0, 10px, 0) rotate(45deg); }
@@ -162,7 +162,7 @@
     transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .hamburger--3dxy-r.is-active .hamburger-inner {
-  background-color: transparent;
+  background-color: transparent !important;
   transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg); }
   .hamburger--3dxy-r.is-active .hamburger-inner::before {
     transform: translate3d(0, 10px, 0) rotate(45deg); }
@@ -381,7 +381,7 @@
   .hamburger--emphatic.is-active .hamburger-inner {
     transition-delay: 0s;
     transition-timing-function: ease-out;
-    background-color: transparent; }
+    background-color: transparent !important; }
     .hamburger--emphatic.is-active .hamburger-inner::before {
       left: -80px;
       top: -80px;
@@ -410,7 +410,7 @@
   .hamburger--emphatic-r.is-active .hamburger-inner {
     transition-delay: 0s;
     transition-timing-function: ease-out;
-    background-color: transparent; }
+    background-color: transparent !important; }
     .hamburger--emphatic-r.is-active .hamburger-inner::before {
       left: -80px;
       top: 80px;
@@ -543,7 +543,7 @@
 
 .hamburger--spring.is-active .hamburger-inner {
   transition-delay: 0.22s;
-  background-color: transparent; }
+  background-color: transparent !important; }
   .hamburger--spring.is-active .hamburger-inner::before {
     top: 0;
     transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -593,7 +593,7 @@
 
 .hamburger--stand.is-active .hamburger-inner {
   transform: rotate(90deg);
-  background-color: transparent;
+  background-color: transparent !important;
   transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }
   .hamburger--stand.is-active .hamburger-inner::before {
     top: 0;
@@ -616,7 +616,7 @@
 
 .hamburger--stand-r.is-active .hamburger-inner {
   transform: rotate(-90deg);
-  background-color: transparent;
+  background-color: transparent !important;
   transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0s 0.15s linear; }
   .hamburger--stand-r.is-active .hamburger-inner::before {
     top: 0;
