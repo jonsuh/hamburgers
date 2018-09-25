@@ -26,7 +26,7 @@
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #8c8c8c; }
+    background-color: #000; }
 
 .hamburger-box {
   width: 40px;
@@ -226,8 +226,8 @@
   transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
 
 /*
- * Arrow Turn
- */
+   * Arrow Turn
+   */
 .hamburger--arrowturn.is-active .hamburger-inner {
   transform: rotate(-180deg); }
   .hamburger--arrowturn.is-active .hamburger-inner::before {
@@ -236,8 +236,8 @@
     transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
 
 /*
- * Arrow Turn Right
- */
+   * Arrow Turn Right
+   */
 .hamburger--arrowturn-r.is-active .hamburger-inner {
   transform: rotate(-180deg); }
   .hamburger--arrowturn-r.is-active .hamburger-inner::before {
