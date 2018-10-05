@@ -21,6 +21,10 @@
   overflow: visible; }
   .hamburger:hover {
     opacity: 0.7; }
+    .hamburger:hover .hamburger-inner {
+      background-color: #999; }
+      .hamburger:hover .hamburger-inner, .hamburger:hover .hamburger-inner::before, .hamburger:hover .hamburger-inner::after {
+        background-color: #999; }
   .hamburger.is-active:hover {
     opacity: 0.7; }
   .hamburger.is-active .hamburger-inner,
@@ -32,6 +36,7 @@
   width: 40px;
   height: 24px;
   display: inline-block;
+  vertical-align: middle;
   position: relative; }
 
 .hamburger-inner {
