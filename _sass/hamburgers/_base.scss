@@ -27,6 +27,12 @@
     }
   }
 
+  @if $hamburger-block-focus {
+    &:focus{
+      outline: none;
+    }
+  }
+
   &.is-active {
     &:hover {
       @if $hamburger-hover-use-filter == true {
