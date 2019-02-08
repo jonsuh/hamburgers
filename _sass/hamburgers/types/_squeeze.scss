@@ -4,38 +4,38 @@
    */
   .hamburger--squeeze {
     .hamburger-inner {
-      transition-duration: 0.075s;
+      transition-duration: ($hamburger-scale-speed * 0.075s);
       transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
       &::before {
-        transition: top 0.075s 0.12s ease,
-                    opacity 0.075s ease;
+        transition: top ($hamburger-scale-speed * 0.075s) ($hamburger-scale-speed * 0.12s) ease,
+                    opacity ($hamburger-scale-speed * 0.075s) ease;
       }
 
       &::after {
-        transition: bottom 0.075s 0.12s ease,
-                    transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        transition: bottom ($hamburger-scale-speed * 0.075s) ($hamburger-scale-speed * 0.12s) ease,
+                    transform ($hamburger-scale-speed * 0.075s) cubic-bezier(0.55, 0.055, 0.675, 0.19);
       }
     }
 
     &.is-active {
       .hamburger-inner {
         transform: rotate(45deg);
-        transition-delay: 0.12s;
+        transition-delay: ($hamburger-scale-speed * 0.12s);
         transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
         &::before {
           top: 0;
           opacity: 0;
-          transition: top 0.075s ease,
-                      opacity 0.075s 0.12s ease;
+          transition: top ($hamburger-scale-speed * 0.075s) ease,
+                      opacity ($hamburger-scale-speed * 0.075s) ($hamburger-scale-speed * 0.12s) ease;
         }
 
         &::after {
           bottom: 0;
           transform: rotate(-90deg);
-          transition: bottom 0.075s ease,
-                      transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition: bottom ($hamburger-scale-speed * 0.075s) ease,
+                      transform ($hamburger-scale-speed * 0.075s) ($hamburger-scale-speed * 0.12s) cubic-bezier(0.215, 0.61, 0.355, 1);
         }
       }
     }

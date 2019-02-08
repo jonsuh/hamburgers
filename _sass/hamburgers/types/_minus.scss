@@ -6,9 +6,9 @@
     .hamburger-inner {
       &::before,
       &::after {
-        transition: bottom 0.08s 0s ease-out,
-                    top 0.08s 0s ease-out,
-                    opacity 0s linear;
+        transition: bottom ($hamburger-scale-speed * 0.08s) ($hamburger-scale-speed * 0s) ease-out,
+                    top ($hamburger-scale-speed * 0.08s) ($hamburger-scale-speed * 0s) ease-out,
+                    opacity ($hamburger-scale-speed * 0s) linear;
       }
     }
 
@@ -17,9 +17,9 @@
         &::before,
         &::after {
           opacity: 0;
-          transition: bottom 0.08s ease-out,
-                      top 0.08s ease-out,
-                      opacity 0s 0.08s linear;
+          transition: bottom ($hamburger-scale-speed * 0.08s) ease-out,
+                      top ($hamburger-scale-speed * 0.08s) ease-out,
+                      opacity ($hamburger-scale-speed * 0s) ($hamburger-scale-speed * 0.08s) linear;
         }
         &::before {
           top: 0;
