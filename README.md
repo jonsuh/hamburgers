@@ -1,4 +1,4 @@
-# Hamburgers
+# It's just a sample of forking and contributing
 
 Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included is the source as a [Sass](#sass) library. It’s modular and customizable, so cook up your own hamburger.
 
