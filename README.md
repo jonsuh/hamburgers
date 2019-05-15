@@ -145,7 +145,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
   @import "hamburgers";
   ```
 
-  \** [More information](https://blog.pivotal.io/pivotal-labs/labs/structure-your-sass-files-with-import) on why Sass’s native `@import` + why you should ditch Sprockets directives altogether.
+  \** [More information](https://content.pivotal.io/blog/structure-your-sass-files-with-import) on why Sass’s native `@import` + why you should ditch Sprockets directives altogether.
 
 ## Customization
 
