@@ -18,12 +18,20 @@
   margin: 0;
   overflow: visible;
 
+  @media (max-width: $hamburger-breakpoint-mobile) {
+    padding: $hamburger-padding-y-mobile $hamburger-padding-x-mobile;
+  }
+
   &:hover {
     @if $hamburger-hover-use-filter == true {
       filter: $hamburger-hover-filter;
     }
     @else {
       opacity: $hamburger-hover-opacity;
+
+      @media (max-width: $hamburger-breakpoint-mobile) {
+        opacity: $hamburger-hover-opacity-mobile;
+      }
     }
   }
 
@@ -34,6 +42,10 @@
       }
       @else {
         opacity: $hamburger-active-hover-opacity;
+
+        @media (max-width: $hamburger-breakpoint-mobile) {
+          opacity: $hamburger-hover-opacity-mobile;
+        }
       }
     }
 
@@ -41,6 +53,10 @@
     .hamburger-inner::before,
     .hamburger-inner::after {
       background-color: $hamburger-active-layer-color;
+
+      @media (max-width: $hamburger-breakpoint-mobile) {
+        background-color: $hamburger-active-layer-color-mobile;
+      }
     }
   }
 }
@@ -50,12 +66,21 @@
   height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
   display: inline-block;
   position: relative;
+
+  @media (max-width: $hamburger-breakpoint-mobile) {
+    width: $hamburger-layer-width-mobile;
+    height: $hamburger-layer-height-mobile * 3 + $hamburger-layer-spacing-mobile * 2;
+  }
 }
 
 .hamburger-inner {
   display: block;
   top: 50%;
   margin-top: $hamburger-layer-height / -2;
+
+  @media (max-width: $hamburger-breakpoint-mobile) {
+    margin-top: $hamburger-layer-height-mobile / -2;
+  }
 
   &,
   &::before,
@@ -68,6 +93,13 @@
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease;
+
+    @media (max-width: $hamburger-breakpoint-mobile) {
+      width: $hamburger-layer-width-mobile;
+      height: $hamburger-layer-height-mobile;
+      background-color: $hamburger-layer-color-mobile;
+      border-radius: $hamburger-layer-border-radius-mobile;
+    }
   }
 
   &::before,
@@ -78,9 +110,17 @@
 
   &::before {
     top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+
+    @media (max-width: $hamburger-breakpoint-mobile) {
+      top: ($hamburger-layer-spacing-mobile + $hamburger-layer-height-mobile) * -1;
+    }
   }
 
   &::after {
     bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+
+    @media (max-width: $hamburger-breakpoint-mobile) {
+      bottom: ($hamburger-layer-spacing-mobile + $hamburger-layer-height-mobile) * -1;
+    }
   }
 }
