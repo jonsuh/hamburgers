@@ -37,10 +37,12 @@
       }
     }
 
-    .hamburger-inner,
+    .hamburger-inner{
+      background-color: $hamburger-active-layer-color;
+    }
     .hamburger-inner::before,
     .hamburger-inner::after {
-      background-color: $hamburger-active-layer-color;
+			background-color: inherit;
     }
   }
 }
@@ -62,7 +64,7 @@
   &::after {
     width: $hamburger-layer-width;
     height: $hamburger-layer-height;
-    background-color: $hamburger-layer-color;
+    background-color: inherit;
     border-radius: $hamburger-layer-border-radius;
     position: absolute;
     transition-property: transform;
