@@ -1,10 +1,12 @@
+@use "sass:math";
+
 @if index($hamburger-types, slider-r) {
   /*
    * Slider Reverse
    */
   .hamburger--slider-r {
     .hamburger-inner {
-      top: $hamburger-layer-height / 2;
+      top: math.div($hamburger-layer-height, 2);
 
       &::before {
         top: $hamburger-layer-height + $hamburger-layer-spacing;
@@ -25,7 +27,7 @@
         transform: translate3d(0, $y-offset, 0) rotate(-45deg);
 
         &::before {
-          transform: rotate(45deg) translate3d($hamburger-layer-width / 7, $hamburger-layer-spacing * -1, 0);
+          transform: rotate(45deg) translate3d(math.div($hamburger-layer-width, 7), $hamburger-layer-spacing * -1, 0);
           opacity: 0;
         }
 
