@@ -4,7 +4,7 @@
    */
   .hamburger--spring {
     .hamburger-inner {
-      top: $hamburger-layer-height / 2;
+      top: calc($hamburger-layer-height / 2);
       transition: background-color 0s 0.13s linear;
 
       &::before {
