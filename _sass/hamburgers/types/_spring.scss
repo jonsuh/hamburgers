@@ -1,10 +1,12 @@
+@use "sass:math";
+
 @if index($hamburger-types, spring) {
   /*
    * Spring
    */
   .hamburger--spring {
     .hamburger-inner {
-      top: $hamburger-layer-height / 2;
+      top: math.div($hamburger-layer-height, 2);
       transition: background-color 0s 0.13s linear;
 
       &::before {
