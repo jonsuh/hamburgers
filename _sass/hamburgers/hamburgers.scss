@@ -11,6 +11,10 @@
 // ==================================================
 $hamburger-padding-x           : 15px !default;
 $hamburger-padding-y           : 15px !default;
+$hamburger-padding-top   	   : $hamburger-padding-y !default;
+$hamburger-padding-right 	   : $hamburger-padding-x !default;
+$hamburger-padding-bottom	   : $hamburger-padding-y !default;
+$hamburger-padding-left  	   : $hamburger-padding-x !default;
 $hamburger-layer-width         : 40px !default;
 $hamburger-layer-height        : 4px !default;
 $hamburger-layer-spacing       : 6px !default;
