@@ -27,6 +27,15 @@
     @else {
       opacity: $hamburger-hover-opacity;
     }
+    
+    .hamburger-inner {
+      background-color: $hamburger-layer-hover-color;
+      &,
+      &::before,
+      &::after {
+          background-color: $hamburger-layer-hover-color;
+      }
+    }
   }
 
   &.is-active {
@@ -51,6 +60,7 @@
   width: $hamburger-layer-width;
   height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
   display: inline-block;
+  vertical-align: middle;
   position: relative;
 }
 
