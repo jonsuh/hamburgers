@@ -4,13 +4,13 @@
    */
   .hamburger--vortex-r {
     .hamburger-inner {
-      transition-duration: 0.2s;
+      transition-duration: ($hamburger-scale-speed * 0.2s);
       transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 
       &::before,
       &::after {
-        transition-duration: 0s;
-        transition-delay: 0.1s;
+        transition-duration: ($hamburger-scale-speed * 0s);
+        transition-delay: ($hamburger-scale-speed * 0.1s);
         transition-timing-function: linear;
       }
 
@@ -30,7 +30,7 @@
 
         &::before,
         &::after {
-          transition-delay: 0s;
+          transition-delay: ($hamburger-scale-speed * 0s);
         }
 
         &::before {
