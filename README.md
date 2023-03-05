@@ -1,6 +1,6 @@
 # Hamburgers
 
-Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included is the source as a [Sass](#sass) library. It’s modular and customizable, so cook up your own hamburger.
+Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included is the source as a [Sass](#sass) library. It’s modular and customizable, so cook up your own hamburger and let your creativity do the wonders.
 
 ![](http://i.imgur.com/t7cUjDu.gif)
 
