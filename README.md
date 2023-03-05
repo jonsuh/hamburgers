@@ -127,7 +127,7 @@ Hamburgers is a collection of tasty CSS-animated hamburger icons. Also included 
 3. Customize your hamburger and/or remove any types you don’t want in `hamburgers.scss`.
 4. Compile your Sass*, and voila!
 
-\* Be sure to run the CSS through [Autoprefixer](https://github.com/postcss/autoprefixer) since the Sass doesn’t account for vendor prefixes.
+\* Be sure to run the CSS through [Autoprefixer](https://github.com/postcss/autoprefixer) since the Sass doesn’t account for vendor prefixes. Autoprefixer has an [online version](https://goonlinetools.com/autoprefixer/) that allows you to enter your non-prefixed CSS and gives you a prefix-added CSS.
 
 ### Install for Ruby on Rails
 
