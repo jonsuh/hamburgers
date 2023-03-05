@@ -9,16 +9,30 @@
 
 // Settings
 // ==================================================
-$hamburger-padding-x           : 15px !default;
-$hamburger-padding-y           : 15px !default;
-$hamburger-layer-width         : 40px !default;
-$hamburger-layer-height        : 4px !default;
-$hamburger-layer-spacing       : 6px !default;
-$hamburger-layer-color         : #000 !default;
-$hamburger-layer-border-radius : 4px !default;
-$hamburger-hover-opacity       : 0.7 !default;
-$hamburger-active-layer-color  : $hamburger-layer-color !default;
-$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+$hamburger-padding-x            : 15px !default;
+$hamburger-padding-y            : 15px !default;
+$hamburger-layer-width          : 40px !default;
+$hamburger-layer-height         : 4px !default;
+$hamburger-layer-spacing        : 6px !default;
+$hamburger-layer-color          : #000 !default;
+$hamburger-layer-border-radius  : 4px !default;
+$hamburger-hover-opacity        : 0.7 !default;
+$hamburger-active-layer-color   : $hamburger-layer-color !default;
+$hamburger-active-hover-opacity : $hamburger-hover-opacity !default;
+
+// Mobile settings
+// ==================================================
+$hamburger-breakpoint-mobile           : 800px !default;
+$hamburger-padding-x-mobile            : $hamburger-padding-x !default;
+$hamburger-padding-y-mobile            : $hamburger-padding-y !default;
+$hamburger-layer-width-mobile          : $hamburger-layer-width !default;
+$hamburger-layer-height-mobile         : $hamburger-layer-height !default;
+$hamburger-layer-spacing-mobile        : $hamburger-layer-spacing !default;
+$hamburger-layer-color-mobile          : $hamburger-layer-color !default;
+$hamburger-layer-border-radius-mobile  : $hamburger-layer-border-radius !default;
+$hamburger-hover-opacity-mobile        : $hamburger-hover-opacity !default;
+$hamburger-active-layer-color-mobile   : $hamburger-active-layer-color !default;
+$hamburger-active-hover-opacity-mobile : $hamburger-active-hover-opacity !default;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
